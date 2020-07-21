@@ -1,0 +1,9 @@
+C:\DevPrograms\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\bin\Debug\ThuVien.dll
+C:\DevPrograms\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\bin\Debug\ThuVien.pdb
+C:\DevPrograms\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.csprojResolveAssemblyReference.cache
+C:\DevPrograms\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.dll
+C:\DevPrograms\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.pdb
+C:\DevPrograms\DoAnQuanLyNhaHang(2)\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\bin\Debug\ThuVien.dll
+C:\DevPrograms\DoAnQuanLyNhaHang(2)\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\bin\Debug\ThuVien.pdb
+C:\DevPrograms\DoAnQuanLyNhaHang(2)\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.dll
+C:\DevPrograms\DoAnQuanLyNhaHang(2)\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.pdb
