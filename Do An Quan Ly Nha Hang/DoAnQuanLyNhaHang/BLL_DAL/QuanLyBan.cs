@@ -14,6 +14,43 @@ namespace BLL_DAL
             var Bans = from b in qlnh.Bans select b;
             return Bans;
         }
+        public bool kiemtraDuLieu(string maban, string tenban, string trangthai)
+        {
+            if (string.IsNullOrEmpty(maban) || string.IsNullOrEmpty(tenban) || string.IsNullOrEmpty(trangthai))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu.");
+                return false;
+            }
+            return true;
+        }
+
+        public void themBan(string maban, string tenban, string trangthai)
+        {
+            bool flag = kiemtraMaBan(maban);
+            if (flag)
+            {
+                MessageBox.Show("Mã bàn đã tồn tại.");
+                return;
+            }
+            Ban ban = new Ban();
+            ban.MaBan = maban;
+            ban.TenBan = tenban;
+            ban.TrangThai = trangthai;
+
+            qlnh.Bans.InsertOnSubmit(ban);
+            qlnh.SubmitChanges();
+            MessageBox.Show("Thêm bàn thành công");
+        }
+
+        public bool kiemtraMaBan(string maban)
+        {
+            Ban ban = qlnh.Bans.Where(a => a.MaBan == maban).FirstOrDefault();
+            if (ban != null)
+            {
+                return true;
+            }
+            return false;
+        }
 
         public void loadBans()
         {

@@ -50,6 +50,7 @@
     </Compile>
     <Compile Include="QuanLyBan.cs" />
     <Compile Include="QuanLyGoiMon.cs" />
+    <Compile Include="QuanLyHoaDon.cs" />
     <Compile Include="QuanLyNhaHang.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

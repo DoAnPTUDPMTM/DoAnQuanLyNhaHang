@@ -26,6 +26,11 @@ namespace BLL_DAL
             TaiKhoanNhomTaiKhoan tk = db.TaiKhoanNhomTaiKhoans.Where(a => a.TenDangNhap == tendangnhap).FirstOrDefault();
             return tk.MaNhomTaiKhoan;
         }
+        public string getTenNhanVienByTenDangNhap(string tendangnhap)
+        {
+            NhanVien nv = db.NhanViens.Where(a => a.TenDangNhap == tendangnhap).FirstOrDefault();
+            return nv.TenNhanVien;
+        }
         public IEnumerable<PhanQuyen> getPhanQuyen(string manhomtaikhoan)
         {
             var PhanQuyens = from pq in db.PhanQuyens where pq.MaNhomTaiKhoan == manhomtaikhoan select pq;

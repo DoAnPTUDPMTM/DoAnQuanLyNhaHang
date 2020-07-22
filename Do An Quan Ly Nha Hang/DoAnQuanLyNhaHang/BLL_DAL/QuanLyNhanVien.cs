@@ -183,5 +183,11 @@ namespace BLL_DAL
             }
             return true;
         }
+
+        public string getMaNhanVienByTenDangNhap(string tendangnhap)
+        {
+            NhanVien nv = db.NhanViens.Where(a => a.TenDangNhap == tendangnhap).FirstOrDefault();
+            return nv.MaNhanVien;
+        }
     }
 }

@@ -7,3 +7,7 @@ C:\DevPrograms\DoAnQuanLyNhaHang(2)\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\Thu
 C:\DevPrograms\DoAnQuanLyNhaHang(2)\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\bin\Debug\ThuVien.pdb
 C:\DevPrograms\DoAnQuanLyNhaHang(2)\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.dll
 C:\DevPrograms\DoAnQuanLyNhaHang(2)\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.pdb
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\bin\Debug\ThuVien.dll
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\bin\Debug\ThuVien.pdb
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.dll
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.pdb

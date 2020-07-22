@@ -11,15 +11,18 @@ CREATE TABLE NhanVien
 	GioiTinh NVARCHAR(10),
 	DienThoai VARCHAR(15),
 	Email VARCHAR(100),
-	DiaChi NVARCHAR(100)
+	DiaChi NVARCHAR(100),
+	TenDangNhap VARCHAR(10),
+	CONSTRAINT FK_NhanVien_TaiKhoan_TenDangNhap FOREIGN KEY (TenDangNhap) REFERENCES TaiKhoan(TenDangNhap)
 )
 GO
 /* Thêm nhân viên */
 insert into NhanVien values
-(N'NV00000001',N'Nguyễn Văn Tuấn','09/09/1987','Nam','0905123456','',N'Huế'),
-(N'NV00000002',N'Hồ Thị Bình','09/09/1992',N'Nữ','0905123456','',N'Hà Nội'),
-(N'NV00000003',N'Ngô Văn Sơn','09/09/1993','Nam','0905123456','',N'Hải Phòng'),
-(N'NV00000004',N'Trần Ngọc Anh','09/09/1989',N'Nữ','0905123456','',N'Đà Nẵng')
+(N'NV00000001',N'Nguyễn Văn Tuấn','09/09/1987','Nam','0905123456','nguyentuan@gmail.com',N'Huế','NV00000001'),
+(N'NV00000002',N'Hồ Thị Bình','09/09/1992',N'Nữ','0905123456','hobinh@gmail.com',N'Hà Nội','NV00000002'),
+(N'NV00000003',N'Ngô Văn Sơn','09/09/1993','Nam','0905123456','ngoson@gmail.com',N'Hải Phòng','NV00000003'),
+(N'NV00000004',N'Trần Ngọc Anh','09/09/1989',N'Nữ','0905123456','trananh@gmail.com',N'Đà Nẵng','NV00000004'),
+(N'NV00000005',N'Hứa Tôn Đạt','09/09/1989',N'Nam','0905123456','tondat@gmail.com',N'Đà Nẵng','NV00000005')
 
 GO
 
@@ -123,12 +126,30 @@ CREATE TABLE TaiKhoan
 	HoatDong BIT
 )
 insert into TaiKhoan(TenDangNhap,MatKhau,HoatDong) values ('admin','admin',1)
+insert into TaiKhoan(TenDangNhap,MatKhau,HoatDong) values ('NV00000001','nhanvien',1)
+insert into TaiKhoan(TenDangNhap,MatKhau,HoatDong) values ('NV00000002','nhanvien',1)
+insert into TaiKhoan(TenDangNhap,MatKhau,HoatDong) values ('NV00000003','nhanvien',1)
+insert into TaiKhoan(TenDangNhap,MatKhau,HoatDong) values ('NV00000004','nhanvien',1)
+insert into TaiKhoan(TenDangNhap,MatKhau,HoatDong) values ('NV00000005','nhanvien',1)
+insert into TaiKhoan(TenDangNhap,MatKhau,HoatDong) values ('NV00000006','nhanvien',1)
+insert into TaiKhoan(TenDangNhap,MatKhau,HoatDong) values ('NV00000007','nhanvien',1)
+insert into TaiKhoan(TenDangNhap,MatKhau,HoatDong) values ('NV00000008','nhanvien',1)
+
 /*----------- Bảng Màn Hình -----------*/
 CREATE TABLE ManHinh
 (
 	MaManHinh VARCHAR(10) PRIMARY KEY,
 	TenManHinh NVARCHAR(100)
 )
+insert into ManHinh VALUES ('SF001',N'Người dùng')
+insert into ManHinh VALUES ('SF002',N'Nhóm người dùng')
+insert into ManHinh VALUES ('SF003',N'Màn hình chức năng')
+insert into ManHinh VALUES ('SF004',N'Thêm người dùng vào nhóm')
+insert into ManHinh VALUES ('SF005',N'Phân quyền')
+insert into ManHinh VALUES ('SF006',N'Quản lý nhân viên')
+insert into ManHinh VALUES ('SF007',N'Quản lý bàn')
+insert into ManHinh VALUES ('SF008',N'Quản lý thực đơn')
+insert into ManHinh VALUES ('SF009',N'Gọi món')
 
 /*----------- Bảng Nhóm tài khoản -----------*/
 CREATE TABLE NhomTaiKhoan
@@ -137,6 +158,8 @@ CREATE TABLE NhomTaiKhoan
 	TenNhomTaiKhoan NVARCHAR(100)ERCR
 	GhiChu NVARCHAR(100)
 )
+insert into NhomTaiKhoan VALUES ('QL','Quản lý',null)
+insert into NhomTaiKhoan VALUES ('NV','Nhân viên',null)
 
 /*----------- Bảng Tài Khoản_Nhóm Tài Khoản -----------*/
 CREATE TABLE TaiKhoanNhomTaiKhoan
@@ -146,6 +169,14 @@ CREATE TABLE TaiKhoanNhomTaiKhoan
 	GhiChu NVARCHAR(100),
 	CONSTRAINT PK_TaiKhoanNhomTaiKhoan_TenDangNhap_MaNhomTaiKhoan PRIMARY KEY (TenDangNhap,MaNhomTaiKhoan)
 )
+insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000001','QL',null)
+insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000002','NV',null)
+insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000003','NV',null)
+insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000004','NV',null)
+insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000005','NV',null)
+insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000006','NV',null)
+insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000007','NV',null)
+insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000008','NV',null)
 
 CREATE TABLE PhanQuyen
 (
@@ -153,7 +184,27 @@ CREATE TABLE PhanQuyen
 	MaManHinh VARCHAR(10),
 	CoQuyen BIT,
 	CONSTRAINT PK_PhanQuyen_MaNhomTaiKhoan_MaManHinh PRIMARY KEY (MaNhomTaiKhoan,MaManHinh)
+	
 )
+insert into PhanQuyen values ('NV','SF001',0)
+insert into PhanQuyen values ('NV','SF002',0)
+insert into PhanQuyen values ('NV','SF003',0)
+insert into PhanQuyen values ('NV','SF004',0)
+insert into PhanQuyen values ('NV','SF005',0)
+insert into PhanQuyen values ('NV','SF006',0)
+insert into PhanQuyen values ('NV','SF007',0)
+insert into PhanQuyen values ('NV','SF008',0)
+insert into PhanQuyen values ('NV','SF009',1)
+insert into PhanQuyen values ('QL','SF001',1)
+insert into PhanQuyen values ('QL','SF002',1)
+insert into PhanQuyen values ('QL','SF003',1)
+insert into PhanQuyen values ('QL','SF004',1)
+insert into PhanQuyen values ('QL','SF005',1)
+insert into PhanQuyen values ('QL','SF006',1)
+insert into PhanQuyen values ('QL','SF007',1)
+insert into PhanQuyen values ('QL','SF008',1)
+insert into PhanQuyen values ('QL','SF009',1)
+
 /* ---------- Bảng Gọi Món ----------- */
 CREATE TABLE GoiMon
 (
@@ -168,14 +219,4 @@ CREATE TABLE GoiMon
 	CONSTRAINT FK_GoiMon_Ban FOREIGN KEY (MaBan) REFERENCES Ban(MaBan),
 	CONSTRAINT FK_GoiMon_ThucDon FOREIGN KEY (MaThucDon) REFERENCES ThucDon(MaThucDon)
 )
-INSERT INTO ManHinh VALUES (N'SF001', N'Người dùng')
-INSERT INTO ManHinh VALUES (N'SF002', N'Nhóm người dùng')
-INSERT INTO ManHinh VALUES (N'SF003', N'Màn hình chức năng')
-INSERT INTO ManHinh VALUES (N'SF004', N'Thêm người dùng vào nhóm')
-INSERT INTO ManHinh VALUES (N'SF005', N'Phân quyền')
 
-
-INSERT INTO TaiKhoanNhomTaiKhoan VALUES (N'admin', N'admin', NULL)
-INSERT INTO TaiKhoanNhomTaiKhoan VALUES (N'admin1', N'ND', NULL)
-INSERT INTO NhomTaiKhoan VALUES (N'admin', N'Admin', NULL)
-INSERT INTO NhomTaiKhoan VALUES (N'ND', N'Người dùng', NULL)

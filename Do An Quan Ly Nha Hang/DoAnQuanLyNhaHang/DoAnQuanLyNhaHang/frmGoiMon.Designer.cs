@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvMonAnDaGoi = new System.Windows.Forms.DataGridView();
+            this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvMenu = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThemMon = new System.Windows.Forms.Button();
             this.btnXoaMon = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
@@ -51,9 +51,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cboBan = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvMonAnDaGoi)).BeginInit();
             this.flpBan.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvMonAnDaGoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.SuspendLayout();
@@ -66,24 +66,6 @@
             this.panel2.Size = new System.Drawing.Size(867, 287);
             this.panel2.TabIndex = 1;
             // 
-            // flpBan
-            // 
-            this.flpBan.AutoScroll = true;
-            this.flpBan.Controls.Add(this.flowLayoutPanel2);
-            this.flpBan.Location = new System.Drawing.Point(12, 44);
-            this.flpBan.Name = "flpBan";
-            this.flpBan.Size = new System.Drawing.Size(482, 723);
-            this.flpBan.TabIndex = 2;
-            this.flpBan.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dtgvMenu);
-            this.panel1.Location = new System.Drawing.Point(500, 544);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 223);
-            this.panel1.TabIndex = 2;
-            // 
             // dtgvMonAnDaGoi
             // 
             this.dtgvMonAnDaGoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -95,6 +77,31 @@
             this.dtgvMonAnDaGoi.Size = new System.Drawing.Size(867, 284);
             this.dtgvMonAnDaGoi.TabIndex = 0;
             this.dtgvMonAnDaGoi.SizeChanged += new System.EventHandler(this.dtgvMonAnDaGoi_SizeChanged);
+            // 
+            // flpBan
+            // 
+            this.flpBan.AutoScroll = true;
+            this.flpBan.Controls.Add(this.flowLayoutPanel2);
+            this.flpBan.Location = new System.Drawing.Point(12, 44);
+            this.flpBan.Name = "flpBan";
+            this.flpBan.Size = new System.Drawing.Size(482, 723);
+            this.flpBan.TabIndex = 2;
+            this.flpBan.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel2.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dtgvMenu);
+            this.panel1.Location = new System.Drawing.Point(500, 544);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(862, 223);
+            this.panel1.TabIndex = 2;
             // 
             // dtgvMenu
             // 
@@ -155,13 +162,6 @@
             this.btnXoaMon.Text = "Xoá món";
             this.btnXoaMon.UseVisualStyleBackColor = true;
             this.btnXoaMon.Click += new System.EventHandler(this.btnXoaMon_Click);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(8, 8);
-            this.flowLayoutPanel2.TabIndex = 0;
             // 
             // label3
             // 
@@ -245,6 +245,7 @@
             this.btnThanhToan.TabIndex = 15;
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnInHoaDon
             // 
@@ -300,9 +301,9 @@
             this.Text = "d";
             this.Load += new System.EventHandler(this.frmGoiMon_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvMonAnDaGoi)).EndInit();
             this.flpBan.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvMonAnDaGoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             this.ResumeLayout(false);

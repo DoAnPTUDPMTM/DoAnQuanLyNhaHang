@@ -9,6 +9,39 @@ namespace BLL_DAL
     public class QuanLyGoiMon
     {
         QuanLyNhaHangDataContext db = new QuanLyNhaHangDataContext();
+        public IEnumerable<Ban> getBans()
+        {
+            var Bans = from b in db.Bans select b;
+            return Bans;
+        }
+        public void setTrangThaiChoBan()
+        {
+            var bans = from b in db.Bans select b;
+            foreach (Ban ban in bans)
+            {
+                if (kiemtraBanCoTrongGoiMonChua(ban.MaBan))
+                {
+                    ban.TrangThai = "Đã có khách";
+                }
+                else
+                {
+                    ban.TrangThai = "Còn trống";
+                }
+            }
+            db.SubmitChanges();
+        }
+        public bool kiemtraBanCoTrongGoiMonChua(string maban)
+        {
+            GoiMon ban = db.GoiMons.Where(a => a.MaBan == maban).FirstOrDefault();
+            if (ban != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public void themMonAn(string maban, string mathucdon, string tenthucdon, string gia, string soluong)
         {
             if (!kiemTraMonAnTonTai(maban, mathucdon))
@@ -21,8 +54,11 @@ namespace BLL_DAL
                 newMon.SoLuong = int.Parse(soluong);
                 newMon.ThanhTien = int.Parse(gia) * int.Parse(soluong);
                 newMon.ThoiGian = DateTime.Now;
+                Ban Ban = db.Bans.Where(a => a.MaBan == maban).FirstOrDefault();
+                Ban.TrangThai = "Đã có khách";
                 db.GoiMons.InsertOnSubmit(newMon);
                 db.SubmitChanges();
+                
                 MessageBox.Show("Thêm món '" + tenthucdon + "' cho bàn '" + maban + "' thành công.");
                 
             }
@@ -82,5 +118,67 @@ namespace BLL_DAL
             return bans;
 
         }
+        public void themChiTietHoaDon(string mahoadon,string mathucdon,int soluong, double thanhtien)
+        {
+            ChiTietHoaDon cthd = new ChiTietHoaDon();
+            cthd.MaHoaDon = mahoadon;
+            cthd.MaThucDon = mathucdon;
+            cthd.SoLuong = soluong;
+            cthd.ThanhTien = thanhtien;
+            db.ChiTietHoaDons.InsertOnSubmit(cthd);
+            
+        }
+        public void thanhToan(string maban,string manhanvien,double thanhtien)
+        {
+            string mahoadon;
+            var hoadons = db.HoaDons.Count();
+            if (hoadons == 0)
+            {
+                mahoadon = "HD1";
+            }
+            else
+            {
+                string flag1;
+                var hoadonss = db.HoaDons.OrderByDescending(x => x.MaHoaDon).FirstOrDefault();
+                flag1 = hoadonss.MaHoaDon;
+                string flag2;
+                flag2 = flag1.Substring(2);
+                int sohoadon = int.Parse(flag2) + 1;
+                mahoadon = "HD" + sohoadon;
+
+            }
+            
+
+            HoaDon hd = new HoaDon();
+            hd.MaHoaDon = mahoadon;
+            hd.NgayTao = DateTime.Now;
+            hd.MaBan = maban;
+            hd.MaNhanVien = manhanvien;
+            hd.ThanhTien = thanhtien;
+
+            db.HoaDons.InsertOnSubmit(hd);
+            // thêm chi tiết hoá đơn
+            var goimon = from gm in db.GoiMons where gm.MaBan == maban select gm;
+            foreach (GoiMon gm in goimon)
+            {
+                string mathucdon = gm.MaThucDon;
+                int soluong = Convert.ToInt32(gm.SoLuong);
+                double thanhtiencthd = Convert.ToDouble(gm.ThanhTien);
+                themChiTietHoaDon(mahoadon, mathucdon, soluong, thanhtiencthd);
+            }
+            // xoá gọi món của bàn
+
+            if (goimon != null)
+            {
+                foreach (GoiMon gm in goimon)
+                {
+                    db.GoiMons.DeleteOnSubmit(gm);
+                }
+            }
+            db.SubmitChanges();
+            MessageBox.Show("Thanh toán thành công.");
+        }
+
+        
     }
 }

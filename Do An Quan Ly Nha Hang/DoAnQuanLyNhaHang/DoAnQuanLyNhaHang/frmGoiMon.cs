@@ -12,6 +12,7 @@ namespace DoAnQuanLyNhaHang
 {
     public partial class frmGoiMon : Form
     {
+        public string manvdn;
         QuanLyBan ban = new QuanLyBan();
         QuanLyThucDon thucdon = new QuanLyThucDon();
         QuanLyGoiMon goimon = new QuanLyGoiMon();
@@ -21,7 +22,11 @@ namespace DoAnQuanLyNhaHang
         {
             InitializeComponent();
         }
-
+        public frmGoiMon(string manv)
+        {
+            InitializeComponent();
+            manvdn = manv;
+        }
         private void frmGoiMon_Load(object sender, EventArgs e)
         {
             loadBans();
@@ -54,13 +59,14 @@ namespace DoAnQuanLyNhaHang
 
         private void loadBans()
         {
-
-            foreach (Ban ban in ban.getBans())
+            flpBan.Controls.Clear();
+            foreach (Ban ban in goimon.getBans())
             {
                 Button btn = new Button() { Width = 80, Height = 80 };
                 btn.Text = ban.TenBan + Environment.NewLine + ban.TrangThai;
                 btn.Click += Btn_Click;
                 btn.Tag = ban;
+                goimon.setTrangThaiChoBan();
                 if (ban.TrangThai == "Còn trống")
                 {
                     btn.BackColor = Color.Green;
@@ -201,7 +207,7 @@ namespace DoAnQuanLyNhaHang
             string soluong = numSoLuong.Value.ToString();
             goimon.themMonAn(maban,mathucdon,tenthucdon,gia,soluong);
             showGoiMon(maban);
-            
+            loadBans();
             idBanDaChon = "";
         }
 
@@ -223,6 +229,7 @@ namespace DoAnQuanLyNhaHang
             {
                 goimon.xoaMonAn(id);
                 showGoiMon(id.ToString());
+                loadBans();
             }
             else
             {
@@ -239,6 +246,13 @@ namespace DoAnQuanLyNhaHang
         private void dtgvMenu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            goimon.thanhToan(idBanDaChon,manvdn,double.Parse(txtTongTien.Text));
+            loadBans();
+            showGoiMon(idBanDaChon);
         }
     }
 }

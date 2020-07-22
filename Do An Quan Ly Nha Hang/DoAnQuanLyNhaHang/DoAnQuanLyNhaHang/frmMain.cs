@@ -12,9 +12,13 @@ namespace DoAnQuanLyNhaHang
 {
     public partial class frmMain : Form
     {
+        QuanLyTaiKhoan qltk = new QuanLyTaiKhoan();
+        QuanLyNhanVien qlnv = new QuanLyNhanVien();
         public string tendangnhap;
         public string matkhau;
-        QuanLyTaiKhoan qltk = new QuanLyTaiKhoan();
+        public string tennhanvien;
+        
+        
         public frmMain()
         {
             InitializeComponent();
@@ -30,6 +34,11 @@ namespace DoAnQuanLyNhaHang
         private void phanQuyen()
         {
             string manhomtaikhoan = qltk.getMaNhomTaiKhoanByTenDangNhap(tendangnhap);
+            if(manhomtaikhoan==null)
+            {
+                MessageBox.Show("Tài Khoản này chưa phân quyền.");
+                return;
+            }
             int a = qltk.getPhanQuyen(manhomtaikhoan).Count();
 
             foreach (ToolStripMenuItem item in menuStrip1.Items)
@@ -99,8 +108,11 @@ namespace DoAnQuanLyNhaHang
 
         private void gọiMónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new frmGoiMon();
+            string manv = qlnv.getMaNhanVienByTenDangNhap(tendangnhap);
+            Form frm = new frmGoiMon(manv);
+            
             frm.MdiParent = this;
+            
             frm.Show();
         }
 
@@ -114,6 +126,7 @@ namespace DoAnQuanLyNhaHang
         private void frmMain_Load(object sender, EventArgs e)
         {
             phanQuyen();
+            lblTenNhanVien.Text = qltk.getTenNhanVienByTenDangNhap(tendangnhap);
             MessageBox.Show(tendangnhap+" @ "+matkhau);
         }
     }
