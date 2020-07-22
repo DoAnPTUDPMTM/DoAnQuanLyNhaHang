@@ -51,7 +51,31 @@ namespace BLL_DAL
             }
             return false;
         }
+        public void xoaBan(string maban)
+        {
+            Ban ban = qlnh.Bans.Where(a => a.MaBan == maban).FirstOrDefault();
+            if (ban != null)
+            {
+                qlnh.Bans.DeleteOnSubmit(ban);
+                qlnh.SubmitChanges();
+                MessageBox.Show("Xoá thành công mã bàn '" + maban + "'");
+            }
+        }
 
+        public bool suaBan(string maban,string tenban,string trangthai)
+        {
+            Ban ban = qlnh.Bans.Where(a => a.MaBan == maban).FirstOrDefault();
+            if (ban != null)
+            {
+                ban.MaBan = maban;
+                ban.TenBan = tenban;
+                ban.TrangThai = trangthai;
+                qlnh.SubmitChanges();
+                MessageBox.Show("Sửa thành công.");
+                return true;
+            }
+            return false;
+        }
         public void loadBans()
         {
             foreach (Ban ban in getBans())

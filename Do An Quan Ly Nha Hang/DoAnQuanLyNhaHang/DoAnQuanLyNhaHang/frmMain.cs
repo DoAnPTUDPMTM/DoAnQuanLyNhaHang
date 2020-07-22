@@ -23,11 +23,19 @@ namespace DoAnQuanLyNhaHang
         {
             InitializeComponent();
             this.IsMdiContainer = true;
+            
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
         }
 
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmTaiKhoan();
+            if (Application.OpenForms.OfType<frmTaiKhoan>().Any())
+            {
+                Application.OpenForms.OfType<frmTaiKhoan>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
             frm.Show();
         }
@@ -76,6 +84,11 @@ namespace DoAnQuanLyNhaHang
         private void mànHìnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmManHinh();
+            if (Application.OpenForms.OfType<frmManHinh>().Any())
+            {
+                Application.OpenForms.OfType<frmManHinh>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
             frm.Show();
         }
@@ -83,6 +96,11 @@ namespace DoAnQuanLyNhaHang
         private void thêmTàiKhoảnVàoNhómToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmThemTaiKhoanVaoNhom();
+            if (Application.OpenForms.OfType<frmThemTaiKhoanVaoNhom>().Any())
+            {
+                Application.OpenForms.OfType<frmThemTaiKhoanVaoNhom>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
             frm.Show();
         }
@@ -95,6 +113,11 @@ namespace DoAnQuanLyNhaHang
         private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmNhanVien();
+            if (Application.OpenForms.OfType<frmNhanVien>().Any())
+            {
+                Application.OpenForms.OfType<frmNhanVien>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
             frm.Show();
         }
@@ -102,6 +125,11 @@ namespace DoAnQuanLyNhaHang
         private void quảnLýBànToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmBan();
+            if (Application.OpenForms.OfType<frmBan>().Any())
+            {
+                Application.OpenForms.OfType<frmBan>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
             frm.Show();
         }
@@ -110,7 +138,11 @@ namespace DoAnQuanLyNhaHang
         {
             string manv = qlnv.getMaNhanVienByTenDangNhap(tendangnhap);
             Form frm = new frmGoiMon(manv);
-            
+            if (Application.OpenForms.OfType<frmGoiMon>().Any())
+            {
+                Application.OpenForms.OfType<frmGoiMon>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
             
             frm.Show();
@@ -119,6 +151,11 @@ namespace DoAnQuanLyNhaHang
         private void quảnLýThựcĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmThucDon();
+            if (Application.OpenForms.OfType<frmThucDon>().Any())
+            {
+                Application.OpenForms.OfType<frmThucDon>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
             frm.MdiParent = this;
             frm.Show();
         }

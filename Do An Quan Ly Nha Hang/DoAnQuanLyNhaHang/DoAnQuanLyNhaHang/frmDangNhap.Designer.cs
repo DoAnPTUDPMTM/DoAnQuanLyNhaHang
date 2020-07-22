@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnDangNhap = new System.Windows.Forms.Button();
-            this.btnHuyBo = new System.Windows.Forms.Button();
             this.txtTaiKhoan = new ThuVien.txtTaiKhoan();
             this.txtMatKhau = new ThuVien.txtMatKhau();
+            this.btnHuyBo = new System.Windows.Forms.Button();
+            this.btnDangNhap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -67,26 +67,6 @@
             this.label3.Text = "Đăng Nhập";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.Location = new System.Drawing.Point(170, 267);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(118, 40);
-            this.btnDangNhap.TabIndex = 3;
-            this.btnDangNhap.Text = "Đăng Nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // btnHuyBo
-            // 
-            this.btnHuyBo.Location = new System.Drawing.Point(327, 267);
-            this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(118, 40);
-            this.btnHuyBo.TabIndex = 4;
-            this.btnHuyBo.Text = "Huỷ Bỏ";
-            this.btnHuyBo.UseVisualStyleBackColor = true;
-            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
-            // 
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Location = new System.Drawing.Point(236, 127);
@@ -103,6 +83,32 @@
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(197, 30);
             this.txtMatKhau.TabIndex = 2;
+            // 
+            // btnHuyBo
+            // 
+            this.btnHuyBo.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_cancel_40;
+            this.btnHuyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuyBo.Location = new System.Drawing.Point(343, 267);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(119, 46);
+            this.btnHuyBo.TabIndex = 4;
+            this.btnHuyBo.Text = "Huỷ Bỏ";
+            this.btnHuyBo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuyBo.UseVisualStyleBackColor = true;
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_login_40;
+            this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangNhap.Location = new System.Drawing.Point(177, 267);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(127, 46);
+            this.btnDangNhap.TabIndex = 3;
+            this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // frmDangNhap
             // 

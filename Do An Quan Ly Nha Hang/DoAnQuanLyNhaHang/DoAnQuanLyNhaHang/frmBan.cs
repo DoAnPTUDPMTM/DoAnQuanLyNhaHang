@@ -57,5 +57,43 @@ namespace DoAnQuanLyNhaHang
             ban.themBan(txtMaBan.Text,txtTenBan.Text,cbTrangThai.Text);
             loadDataGridView();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có chắc chắn muốn xoá bàn '"+ dtgvBan.CurrentRow.Cells[0].Value.ToString() + "' không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2)==DialogResult.No)
+            {
+                return;
+            }
+            ban.xoaBan(dtgvBan.CurrentRow.Cells[0].Value.ToString());
+            loadDataGridView();
+        }
+
+        private void dtgvBan_SelectionChanged(object sender, EventArgs e)
+        {
+            txtMaBan.Text = dtgvBan.CurrentRow.Cells[0].Value.ToString();
+            txtTenBan.Text = dtgvBan.CurrentRow.Cells[1].Value.ToString();
+            cbTrangThai.Text = dtgvBan.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            bool flag = ban.kiemtraMaBan(txtMaBan.Text);
+            if (!flag)
+            {
+                MessageBox.Show("Mã bàn không tồn tại");
+                return;
+            }
+            string maban = txtMaBan.Text;
+            string tenban = txtTenBan.Text;
+            string trangthai = cbTrangThai.Text;
+
+            ban.suaBan(maban,tenban,trangthai);
+            loadDataGridView();
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

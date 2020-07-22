@@ -43,6 +43,7 @@
             this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +54,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
             this.nghiệpVụToolStripMenuItem,
-            this.gọiMónToolStripMenuItem});
+            this.gọiMónToolStripMenuItem,
+            this.btnDangXuat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1129, 28);
@@ -184,6 +186,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên NV:";
             // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(91, 24);
+            this.btnDangXuat.Text = "Đăng Xuất";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,5 +231,6 @@
         private System.Windows.Forms.Label lblTenNhanVien;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem btnDangXuat;
     }
 }
