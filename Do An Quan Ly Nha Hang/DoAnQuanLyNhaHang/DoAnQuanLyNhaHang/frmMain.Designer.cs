@@ -152,8 +152,9 @@
             // 
             // gọiMónToolStripMenuItem
             // 
+            this.gọiMónToolStripMenuItem.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_restaurant_48;
             this.gọiMónToolStripMenuItem.Name = "gọiMónToolStripMenuItem";
-            this.gọiMónToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.gọiMónToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.gọiMónToolStripMenuItem.Tag = "SF009";
             this.gọiMónToolStripMenuItem.Text = "Gọi Món";
             this.gọiMónToolStripMenuItem.Click += new System.EventHandler(this.gọiMónToolStripMenuItem_Click);
