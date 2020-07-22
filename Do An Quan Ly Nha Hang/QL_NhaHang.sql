@@ -158,8 +158,8 @@ CREATE TABLE NhomTaiKhoan
 	TenNhomTaiKhoan NVARCHAR(100)ERCR
 	GhiChu NVARCHAR(100)
 )
-insert into NhomTaiKhoan VALUES ('QL','Quản lý',null)
-insert into NhomTaiKhoan VALUES ('NV','Nhân viên',null)
+insert into NhomTaiKhoan VALUES ('QL',N'Quản lý',null)
+insert into NhomTaiKhoan VALUES ('NV',N'Nhân viên',null)
 
 /*----------- Bảng Tài Khoản_Nhóm Tài Khoản -----------*/
 CREATE TABLE TaiKhoanNhomTaiKhoan
