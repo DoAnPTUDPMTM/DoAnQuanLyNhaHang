@@ -73,7 +73,14 @@ namespace DoAnQuanLyNhaHang
             {
                 e.Cancel = true;
             }
+            else
+            {
+                Form frm = new frmDangNhap();
+
+                frm.Show();
+            }
             
+
         }
 
         private void nhómTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -165,6 +172,12 @@ namespace DoAnQuanLyNhaHang
             phanQuyen();
             lblTenNhanVien.Text = qltk.getTenNhanVienByTenDangNhap(tendangnhap);
             MessageBox.Show(tendangnhap+" @ "+matkhau);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
         }
     }
 }

@@ -39,10 +39,10 @@
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýThựcĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gọiMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.gọiMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -150,15 +150,6 @@
             this.quảnLýThựcĐơnToolStripMenuItem.Text = "Quản Lý Thực Đơn";
             this.quảnLýThựcĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýThựcĐơnToolStripMenuItem_Click);
             // 
-            // gọiMónToolStripMenuItem
-            // 
-            this.gọiMónToolStripMenuItem.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_restaurant_48;
-            this.gọiMónToolStripMenuItem.Name = "gọiMónToolStripMenuItem";
-            this.gọiMónToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
-            this.gọiMónToolStripMenuItem.Tag = "SF009";
-            this.gọiMónToolStripMenuItem.Text = "Gọi Món";
-            this.gọiMónToolStripMenuItem.Click += new System.EventHandler(this.gọiMónToolStripMenuItem_Click);
-            // 
             // lblTenNhanVien
             // 
             this.lblTenNhanVien.AutoSize = true;
@@ -187,12 +178,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên NV:";
             // 
+            // gọiMónToolStripMenuItem
+            // 
+            this.gọiMónToolStripMenuItem.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_restaurant_48;
+            this.gọiMónToolStripMenuItem.Name = "gọiMónToolStripMenuItem";
+            this.gọiMónToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.gọiMónToolStripMenuItem.Tag = "SF009";
+            this.gọiMónToolStripMenuItem.Text = "Gọi Món";
+            this.gọiMónToolStripMenuItem.Click += new System.EventHandler(this.gọiMónToolStripMenuItem_Click);
+            // 
             // btnDangXuat
             // 
             this.btnDangXuat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnDangXuat.Image = global::DoAnQuanLyNhaHang.Properties.Resources.thoat;
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(91, 24);
+            this.btnDangXuat.Size = new System.Drawing.Size(111, 24);
             this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // frmMain
             // 
