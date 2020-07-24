@@ -155,8 +155,9 @@ insert into ManHinh VALUES ('SF009',N'Gọi món')
 CREATE TABLE NhomTaiKhoan
 (
 	MaNhomTaiKhoan VARCHAR(10) PRIMARY KEY,
-	TenNhomTaiKhoan NVARCHAR(100)ERCR
+	TenNhomTaiKhoan NVARCHAR(100),
 	GhiChu NVARCHAR(100)
+	
 )
 insert into NhomTaiKhoan VALUES ('QL',N'Quản lý',null)
 insert into NhomTaiKhoan VALUES ('NV',N'Nhân viên',null)
@@ -167,8 +168,10 @@ CREATE TABLE TaiKhoanNhomTaiKhoan
 	TenDangNhap VARCHAR(10),
 	MaNhomTaiKhoan VARCHAR(10),
 	GhiChu NVARCHAR(100),
-	CONSTRAINT PK_TaiKhoanNhomTaiKhoan_TenDangNhap_MaNhomTaiKhoan PRIMARY KEY (TenDangNhap,MaNhomTaiKhoan)
+	CONSTRAINT PK_TaiKhoanNhomTaiKhoan_TenDangNhap_MaNhomTaiKhoan PRIMARY KEY (MaNhomTaiKhoan,TenDangNhap),
+	CONSTRAINT FK_TaiKhoanNhomTaiKhoan_TenDangNhap_TenDangNhap FOREIGN KEY (TenDangNhap) REFERENCES TaiKhoan(TenDangNhap)
 )
+DROP TABLE TaiKhoanNhomTaiKhoan
 insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000001','QL',null)
 insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000002','NV',null)
 insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000003','NV',null)
@@ -183,9 +186,10 @@ CREATE TABLE PhanQuyen
 	MaNhomTaiKhoan VARCHAR(10),
 	MaManHinh VARCHAR(10),
 	CoQuyen BIT,
-	CONSTRAINT PK_PhanQuyen_MaNhomTaiKhoan_MaManHinh PRIMARY KEY (MaNhomTaiKhoan,MaManHinh)
-	
+	CONSTRAINT PK_PhanQuyen_MaNhomTaiKhoan_MaManHinh PRIMARY KEY (MaNhomTaiKhoan,MaManHinh),
 )
+
+
 insert into PhanQuyen values ('NV','SF001',0)
 insert into PhanQuyen values ('NV','SF002',0)
 insert into PhanQuyen values ('NV','SF003',0)

@@ -52,9 +52,15 @@ namespace DoAnQuanLyNhaHang
             // TODO: This line of code loads data into the 'dataSet1.NhanVien' table. You can move, or remove it, as needed.
             loadDatagridviewNhanVien();
             radNam.Checked = true ;
+            loadComboboxTaiKhoan();
 
         }
-
+        private void loadComboboxTaiKhoan()
+        {
+            cboTaiKhoan.Items.Add("<<Không chọn>>");
+            cboTaiKhoan.DataSource = nv.getTaiKhoanChuaCoDung();
+            cboTaiKhoan.DisplayMember = "TenDangNhap";
+        }
         private void gioiTinhTextBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -145,6 +151,7 @@ namespace DoAnQuanLyNhaHang
                 string manhanvien = txtMaNhanVien.Text;
                 string tennhanvien = txtTenNhanVien.Text;
                 string ngaysinh = dtpNgaySinh.Text;
+                string tendangnhap = cboTaiKhoan.Text;
                 string gioitinh;
                 if (radNam.Checked)
                 {
@@ -158,8 +165,9 @@ namespace DoAnQuanLyNhaHang
                 string email = txtEmail.Text;
                 string diachi = txtDiaChi.Text;
 
-                nv.themNhanVien(manhanvien, tennhanvien, ngaysinh, gioitinh, dienthoai, email, diachi);
+                nv.themNhanVien(manhanvien, tennhanvien, ngaysinh, gioitinh, dienthoai, email, diachi,tendangnhap);
                 loadDatagridviewNhanVien();
+                loadComboboxTaiKhoan();
             }
             else
             {

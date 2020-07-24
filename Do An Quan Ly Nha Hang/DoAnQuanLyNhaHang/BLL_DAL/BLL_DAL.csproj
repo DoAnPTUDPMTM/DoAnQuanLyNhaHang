@@ -57,6 +57,7 @@
       <DependentUpon>QuanLyNhaHang.dbml</DependentUpon>
     </Compile>
     <Compile Include="QuanLyNhanVien.cs" />
+    <Compile Include="QuanLyPhanQuyen.cs" />
     <Compile Include="QuanLyTaiKhoan.cs" />
     <Compile Include="QuanLyThucDon.cs" />
   </ItemGroup>

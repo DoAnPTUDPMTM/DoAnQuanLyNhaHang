@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManHinh));
             System.Windows.Forms.Label maManHinhLabel;
             System.Windows.Forms.Label tenManHinhLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManHinh));
             this.dataSet1 = new DoAnQuanLyNhaHang.DataSet1();
             this.manHinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.manHinhTableAdapter = new DoAnQuanLyNhaHang.DataSet1TableAdapters.ManHinhTableAdapter();
             this.tableAdapterManager = new DoAnQuanLyNhaHang.DataSet1TableAdapters.TableAdapterManager();
             this.manHinhBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.manHinhBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.manHinhDataGridView = new System.Windows.Forms.DataGridView();
-            this.maManHinhTextBox = new System.Windows.Forms.TextBox();
-            this.tenManHinhTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maManHinhTextBox = new System.Windows.Forms.TextBox();
+            this.tenManHinhTextBox = new System.Windows.Forms.TextBox();
             maManHinhLabel = new System.Windows.Forms.Label();
             tenManHinhLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -62,6 +62,24 @@
             this.manHinhBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manHinhDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // maManHinhLabel
+            // 
+            maManHinhLabel.AutoSize = true;
+            maManHinhLabel.Location = new System.Drawing.Point(199, 65);
+            maManHinhLabel.Name = "maManHinhLabel";
+            maManHinhLabel.Size = new System.Drawing.Size(95, 17);
+            maManHinhLabel.TabIndex = 2;
+            maManHinhLabel.Text = "Mã Màn Hình:";
+            // 
+            // tenManHinhLabel
+            // 
+            tenManHinhLabel.AutoSize = true;
+            tenManHinhLabel.Location = new System.Drawing.Point(199, 103);
+            tenManHinhLabel.Name = "tenManHinhLabel";
+            tenManHinhLabel.Size = new System.Drawing.Size(101, 17);
+            tenManHinhLabel.TabIndex = 4;
+            tenManHinhLabel.Text = "Tên Màn Hình:";
             // 
             // dataSet1
             // 
@@ -80,7 +98,11 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BanTableAdapter = null;
             this.tableAdapterManager.ManHinhTableAdapter = this.manHinhTableAdapter;
+            this.tableAdapterManager.NhanVienTableAdapter = null;
+            this.tableAdapterManager.NhomTaiKhoanTableAdapter = null;
+            this.tableAdapterManager.TaiKhoanNhomTaiKhoanTableAdapter = null;
             this.tableAdapterManager.TaiKhoanTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAnQuanLyNhaHang.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -115,6 +137,31 @@
             this.manHinhBindingNavigator.TabIndex = 0;
             this.manHinhBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(100, 24);
+            this.bindingNavigatorAddNewItem.Text = "Thêm Mới";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(59, 24);
+            this.bindingNavigatorDeleteItem.Text = "Xoá";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -147,16 +194,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -179,26 +219,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(100, 24);
-            this.bindingNavigatorAddNewItem.Text = "Thêm Mới";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(59, 24);
-            this.bindingNavigatorDeleteItem.Text = "Xoá";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // manHinhBindingNavigatorSaveItem
             // 
@@ -217,49 +239,12 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.manHinhDataGridView.DataSource = this.manHinhBindingSource;
-            this.manHinhDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.manHinhDataGridView.Location = new System.Drawing.Point(0, 176);
             this.manHinhDataGridView.Name = "manHinhDataGridView";
             this.manHinhDataGridView.RowTemplate.Height = 24;
             this.manHinhDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.manHinhDataGridView.Size = new System.Drawing.Size(682, 277);
             this.manHinhDataGridView.TabIndex = 1;
-            // 
-            // maManHinhLabel
-            // 
-            maManHinhLabel.AutoSize = true;
-            maManHinhLabel.Location = new System.Drawing.Point(199, 65);
-            maManHinhLabel.Name = "maManHinhLabel";
-            maManHinhLabel.Size = new System.Drawing.Size(95, 17);
-            maManHinhLabel.TabIndex = 2;
-            maManHinhLabel.Text = "Mã Màn Hình:";
-            // 
-            // maManHinhTextBox
-            // 
-            this.maManHinhTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manHinhBindingSource, "MaManHinh", true));
-            this.maManHinhTextBox.Location = new System.Drawing.Point(306, 62);
-            this.maManHinhTextBox.Multiline = true;
-            this.maManHinhTextBox.Name = "maManHinhTextBox";
-            this.maManHinhTextBox.Size = new System.Drawing.Size(161, 22);
-            this.maManHinhTextBox.TabIndex = 3;
-            // 
-            // tenManHinhLabel
-            // 
-            tenManHinhLabel.AutoSize = true;
-            tenManHinhLabel.Location = new System.Drawing.Point(199, 103);
-            tenManHinhLabel.Name = "tenManHinhLabel";
-            tenManHinhLabel.Size = new System.Drawing.Size(101, 17);
-            tenManHinhLabel.TabIndex = 4;
-            tenManHinhLabel.Text = "Tên Màn Hình:";
-            // 
-            // tenManHinhTextBox
-            // 
-            this.tenManHinhTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manHinhBindingSource, "TenManHinh", true));
-            this.tenManHinhTextBox.Location = new System.Drawing.Point(306, 100);
-            this.tenManHinhTextBox.Multiline = true;
-            this.tenManHinhTextBox.Name = "tenManHinhTextBox";
-            this.tenManHinhTextBox.Size = new System.Drawing.Size(161, 22);
-            this.tenManHinhTextBox.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -272,6 +257,24 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "TenManHinh";
             this.dataGridViewTextBoxColumn2.HeaderText = "Tên Màn Hình";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // maManHinhTextBox
+            // 
+            this.maManHinhTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manHinhBindingSource, "MaManHinh", true));
+            this.maManHinhTextBox.Location = new System.Drawing.Point(306, 62);
+            this.maManHinhTextBox.Multiline = true;
+            this.maManHinhTextBox.Name = "maManHinhTextBox";
+            this.maManHinhTextBox.Size = new System.Drawing.Size(161, 22);
+            this.maManHinhTextBox.TabIndex = 3;
+            // 
+            // tenManHinhTextBox
+            // 
+            this.tenManHinhTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manHinhBindingSource, "TenManHinh", true));
+            this.tenManHinhTextBox.Location = new System.Drawing.Point(306, 100);
+            this.tenManHinhTextBox.Multiline = true;
+            this.tenManHinhTextBox.Name = "tenManHinhTextBox";
+            this.tenManHinhTextBox.Size = new System.Drawing.Size(161, 22);
+            this.tenManHinhTextBox.TabIndex = 5;
             // 
             // frmManHinh
             // 

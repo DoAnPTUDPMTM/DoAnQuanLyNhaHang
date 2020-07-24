@@ -36,6 +36,7 @@
             System.Windows.Forms.Label dienThoaiLabel;
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label diaChiLabel;
+            System.Windows.Forms.Label label1;
             this.dataSet1 = new DoAnQuanLyNhaHang.DataSet1();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nhanVienTableAdapter = new DoAnQuanLyNhaHang.DataSet1TableAdapters.NhanVienTableAdapter();
@@ -47,15 +48,16 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grbGioiTinh = new System.Windows.Forms.GroupBox();
+            this.radNu = new System.Windows.Forms.RadioButton();
+            this.radNam = new System.Windows.Forms.RadioButton();
             this.nhanVienBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.dtgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.grbGioiTinh = new System.Windows.Forms.GroupBox();
-            this.radNam = new System.Windows.Forms.RadioButton();
-            this.radNu = new System.Windows.Forms.RadioButton();
+            this.cboTaiKhoan = new System.Windows.Forms.ComboBox();
             maNhanVienLabel = new System.Windows.Forms.Label();
             tenNhanVienLabel = new System.Windows.Forms.Label();
             ngaySinhLabel = new System.Windows.Forms.Label();
@@ -63,12 +65,13 @@
             dienThoaiLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             diaChiLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.grbGioiTinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNhanVien)).BeginInit();
-            this.grbGioiTinh.SuspendLayout();
             this.SuspendLayout();
             // 
             // maNhanVienLabel
@@ -210,6 +213,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(label1);
+            this.groupBox1.Controls.Add(this.cboTaiKhoan);
             this.groupBox1.Controls.Add(this.grbGioiTinh);
             this.groupBox1.Controls.Add(maNhanVienLabel);
             this.groupBox1.Controls.Add(this.txtDiaChi);
@@ -226,10 +231,42 @@
             this.groupBox1.Controls.Add(gioiTinhLabel);
             this.groupBox1.Location = new System.Drawing.Point(417, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(449, 297);
+            this.groupBox1.Size = new System.Drawing.Size(449, 322);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Nhân Viên";
+            // 
+            // grbGioiTinh
+            // 
+            this.grbGioiTinh.Controls.Add(this.radNu);
+            this.grbGioiTinh.Controls.Add(this.radNam);
+            this.grbGioiTinh.Location = new System.Drawing.Point(149, 124);
+            this.grbGioiTinh.Name = "grbGioiTinh";
+            this.grbGioiTinh.Size = new System.Drawing.Size(200, 41);
+            this.grbGioiTinh.TabIndex = 22;
+            this.grbGioiTinh.TabStop = false;
+            // 
+            // radNu
+            // 
+            this.radNu.AutoSize = true;
+            this.radNu.Location = new System.Drawing.Point(119, 12);
+            this.radNu.Name = "radNu";
+            this.radNu.Size = new System.Drawing.Size(47, 21);
+            this.radNu.TabIndex = 1;
+            this.radNu.TabStop = true;
+            this.radNu.Text = "Nữ";
+            this.radNu.UseVisualStyleBackColor = true;
+            // 
+            // radNam
+            // 
+            this.radNam.AutoSize = true;
+            this.radNam.Location = new System.Drawing.Point(18, 12);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(58, 21);
+            this.radNam.TabIndex = 0;
+            this.radNam.TabStop = true;
+            this.radNam.Text = "Nam";
+            this.radNam.UseVisualStyleBackColor = true;
             // 
             // nhanVienBindingSource1
             // 
@@ -289,37 +326,22 @@
             this.dtgvNhanVien.TabIndex = 21;
             this.dtgvNhanVien.SelectionChanged += new System.EventHandler(this.dtgvNhanVien_SelectionChanged);
             // 
-            // grbGioiTinh
+            // cboTaiKhoan
             // 
-            this.grbGioiTinh.Controls.Add(this.radNu);
-            this.grbGioiTinh.Controls.Add(this.radNam);
-            this.grbGioiTinh.Location = new System.Drawing.Point(149, 124);
-            this.grbGioiTinh.Name = "grbGioiTinh";
-            this.grbGioiTinh.Size = new System.Drawing.Size(200, 41);
-            this.grbGioiTinh.TabIndex = 22;
-            this.grbGioiTinh.TabStop = false;
+            this.cboTaiKhoan.FormattingEnabled = true;
+            this.cboTaiKhoan.Location = new System.Drawing.Point(149, 292);
+            this.cboTaiKhoan.Name = "cboTaiKhoan";
+            this.cboTaiKhoan.Size = new System.Drawing.Size(200, 24);
+            this.cboTaiKhoan.TabIndex = 22;
             // 
-            // radNam
+            // label1
             // 
-            this.radNam.AutoSize = true;
-            this.radNam.Location = new System.Drawing.Point(18, 12);
-            this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(58, 21);
-            this.radNam.TabIndex = 0;
-            this.radNam.TabStop = true;
-            this.radNam.Text = "Nam";
-            this.radNam.UseVisualStyleBackColor = true;
-            // 
-            // radNu
-            // 
-            this.radNu.AutoSize = true;
-            this.radNu.Location = new System.Drawing.Point(119, 12);
-            this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(47, 21);
-            this.radNu.TabIndex = 1;
-            this.radNu.TabStop = true;
-            this.radNu.Text = "Nữ";
-            this.radNu.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(36, 295);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(75, 17);
+            label1.TabIndex = 23;
+            label1.Text = "Tài khoản:";
             // 
             // frmNhanVien
             // 
@@ -339,10 +361,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvNhanVien)).EndInit();
             this.grbGioiTinh.ResumeLayout(false);
             this.grbGioiTinh.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvNhanVien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +391,6 @@
         private System.Windows.Forms.GroupBox grbGioiTinh;
         private System.Windows.Forms.RadioButton radNu;
         private System.Windows.Forms.RadioButton radNam;
+        private System.Windows.Forms.ComboBox cboTaiKhoan;
     }
 }

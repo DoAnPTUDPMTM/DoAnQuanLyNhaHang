@@ -29,7 +29,7 @@ namespace BLL_DAL
             }
         }
 
-        public void themNhanVien(string manhanvien, string tennhanvien, string ngaysinh, string gioitinh, string dienthoai, string email, string diachi)
+        public void themNhanVien(string manhanvien, string tennhanvien, string ngaysinh, string gioitinh, string dienthoai, string email, string diachi,string tendangnhap)
         {
             if (kiemtraNhanVienTonTaiChua(manhanvien))
             {
@@ -44,6 +44,7 @@ namespace BLL_DAL
             nv.DienThoai = dienthoai;
             nv.Email = email;
             nv.DiaChi = diachi;
+            nv.TenDangNhap = tendangnhap;
 
             db.NhanViens.InsertOnSubmit(nv);
             db.SubmitChanges();
@@ -188,6 +189,14 @@ namespace BLL_DAL
         {
             NhanVien nv = db.NhanViens.Where(a => a.TenDangNhap == tendangnhap).FirstOrDefault();
             return nv.MaNhanVien;
+        }
+        public IEnumerable<TaiKhoan> getTaiKhoanChuaCoDung()
+        {
+            var taikhoans = from tk in db.TaiKhoans select tk;
+            var taikhoantrongnhanvien = from taikhoan in db.TaiKhoans
+                                        join nv in db.NhanViens on taikhoan.TenDangNhap equals nv.TenDangNhap
+                                        select taikhoan;
+            return taikhoans.Except(taikhoantrongnhanvien);
         }
     }
 }
