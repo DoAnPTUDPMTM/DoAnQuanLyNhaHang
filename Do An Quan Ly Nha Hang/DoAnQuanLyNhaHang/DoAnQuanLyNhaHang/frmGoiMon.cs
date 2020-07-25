@@ -64,6 +64,7 @@ namespace DoAnQuanLyNhaHang
             {
                 Button btn = new Button() { Width = 80, Height = 80 };
                 btn.Text = ban.TenBan + Environment.NewLine + ban.TrangThai;
+                //btn.BackgroundImage = DoAnQuanLyNhaHang.Properties.Resources.;
                 btn.Click += Btn_Click;
                 btn.Tag = ban;
                 goimon.setTrangThaiChoBan();
