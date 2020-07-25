@@ -33,6 +33,8 @@ namespace DoAnQuanLyNhaHang
             loadMenu();
             loadComboboxThucDon();
             loadComboboxBan();
+            loadComboboxBanCanChuyen();
+            loadComboboxBanTrong();
         }
         private void loadMenu()
         {
@@ -211,6 +213,8 @@ namespace DoAnQuanLyNhaHang
             goimon.themMonAn(maban,mathucdon,tenthucdon,gia,soluong);
             showGoiMon(maban);
             loadBans();
+            loadComboboxBanCanChuyen();
+            loadComboboxBanTrong();
             idBanDaChon = "";
         }
 
@@ -233,6 +237,8 @@ namespace DoAnQuanLyNhaHang
                 goimon.xoaMonAn(id);
                 showGoiMon(id.ToString());
                 loadBans();
+                loadComboboxBanCanChuyen();
+                loadComboboxBanTrong();
             }
             else
             {
@@ -255,7 +261,50 @@ namespace DoAnQuanLyNhaHang
         {
             goimon.thanhToan(cboBan.SelectedValue.ToString(),manvdn,double.Parse(txtTongTien.Text));
             loadBans();
+            loadComboboxBanCanChuyen();
+            loadComboboxBanTrong();
             showGoiMon(idBanDaChon);
+        }
+
+        private void loadComboboxBanCanChuyen()
+        {
+            if(goimon.getBanCanChuyen().Count() == 0)
+            {
+                cboBanCanChuyen.Text = "";
+            }
+            cboBanCanChuyen.DataSource = goimon.getBanCanChuyen();
+            cboBanCanChuyen.DisplayMember = "TenBan";
+            cboBanCanChuyen.ValueMember = "MaBan";
+        }
+
+        private void loadComboboxBanTrong()
+        {
+            cboBanConTrong.DataSource = goimon.getBanConTrong();
+            cboBanConTrong.DisplayMember = "TenBan";
+            cboBanConTrong.ValueMember = "MaBan";
+        }
+
+        private void btnChuyenBan_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có chắc muốn chuyển bàn '"+cboBanCanChuyen.Text+"' sang bàn '"+cboBanConTrong.Text+"' không?","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2) == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                string macanchuyen = cboBanCanChuyen.SelectedValue.ToString();
+                string macontrong = cboBanConTrong.SelectedValue.ToString();
+                bool flag = goimon.chuyenBan(macanchuyen, macontrong);
+                if (!flag)
+                {
+                    return;
+                }
+                else
+                {
+                    loadBans();
+                }
+            }
+            
         }
     }
 }

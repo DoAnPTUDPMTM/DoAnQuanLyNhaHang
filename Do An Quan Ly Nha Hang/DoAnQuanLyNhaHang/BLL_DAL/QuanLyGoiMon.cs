@@ -58,16 +58,16 @@ namespace BLL_DAL
                 Ban.TrangThai = "Đã có khách";
                 db.GoiMons.InsertOnSubmit(newMon);
                 db.SubmitChanges();
-                
+
                 MessageBox.Show("Thêm món '" + tenthucdon + "' cho bàn '" + maban + "' thành công.");
-                
+
             }
             else
             {
-                capnhatMonAn(maban,mathucdon,soluong);
-                
+                capnhatMonAn(maban, mathucdon, soluong);
+
             }
-            
+
         }
         public void capnhatMonAn(string maban, string mathucdon, string soluong)
         {
@@ -118,7 +118,7 @@ namespace BLL_DAL
             return bans;
 
         }
-        public void themChiTietHoaDon(string mahoadon,string mathucdon,int soluong, double thanhtien)
+        public void themChiTietHoaDon(string mahoadon, string mathucdon, int soluong, double thanhtien)
         {
             ChiTietHoaDon cthd = new ChiTietHoaDon();
             cthd.MaHoaDon = mahoadon;
@@ -126,9 +126,9 @@ namespace BLL_DAL
             cthd.SoLuong = soluong;
             cthd.ThanhTien = thanhtien;
             db.ChiTietHoaDons.InsertOnSubmit(cthd);
-            
+
         }
-        public void thanhToan(string maban,string manhanvien,double thanhtien)
+        public void thanhToan(string maban, string manhanvien, double thanhtien)
         {
             string mahoadon;
             var hoadons = db.HoaDons.Count();
@@ -147,7 +147,7 @@ namespace BLL_DAL
                 mahoadon = "HD" + sohoadon;
 
             }
-            
+
 
             HoaDon hd = new HoaDon();
             hd.MaHoaDon = mahoadon;
@@ -176,9 +176,38 @@ namespace BLL_DAL
                 }
             }
             db.SubmitChanges();
-            MessageBox.Show("Tổng số tiền của bàn '"+maban+"' là '"+thanhtien+"'.");
+            MessageBox.Show("Tổng số tiền của bàn '" + maban + "' là '" + thanhtien + "'.");
         }
 
-        
+
+
+        public bool chuyenBan(string mabancanchuyen, string mabancontrong)
+        {
+            if (string.IsNullOrEmpty(mabancanchuyen) || string.IsNullOrEmpty(mabancontrong))
+            {
+                MessageBox.Show("Chuyển bàn không thành công.");
+                return false;
+            }
+            var getGoiMonBanCanChuyen = from gm in db.GoiMons where gm.MaBan == mabancanchuyen select gm;
+            foreach (GoiMon gm in getGoiMonBanCanChuyen)
+            {
+                gm.MaBan = mabancontrong;
+            }
+            db.SubmitChanges();
+            
+            MessageBox.Show("Chuyển bàn thành công.");
+            return true;
+        }
+
+        public IEnumerable<Ban> getBanConTrong()
+        {
+            var bans = from ban in db.Bans where ban.TrangThai == "Còn trống" select ban;
+            return bans;
+        }
+        public IEnumerable<Ban> getBanCanChuyen()
+        {
+            var bans = from ban in db.Bans where ban.TrangThai == "Đã có khách" select ban;
+            return bans;
+        }
     }
 }

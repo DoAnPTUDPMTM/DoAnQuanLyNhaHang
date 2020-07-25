@@ -50,6 +50,12 @@
             this.btnInHoaDon = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cboBan = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboBanConTrong = new System.Windows.Forms.ComboBox();
+            this.cboBanCanChuyen = new System.Windows.Forms.ComboBox();
+            this.btnChuyenBan = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMonAnDaGoi)).BeginInit();
             this.flpBan.SuspendLayout();
@@ -273,11 +279,73 @@
             this.cboBan.Size = new System.Drawing.Size(119, 24);
             this.cboBan.TabIndex = 18;
             // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Blue;
+            this.label9.Location = new System.Drawing.Point(1373, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(431, 32);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Chuyển bàn";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cboBanConTrong
+            // 
+            this.cboBanConTrong.FormattingEnabled = true;
+            this.cboBanConTrong.Location = new System.Drawing.Point(1659, 104);
+            this.cboBanConTrong.Name = "cboBanConTrong";
+            this.cboBanConTrong.Size = new System.Drawing.Size(137, 24);
+            this.cboBanConTrong.TabIndex = 20;
+            // 
+            // cboBanCanChuyen
+            // 
+            this.cboBanCanChuyen.FormattingEnabled = true;
+            this.cboBanCanChuyen.Location = new System.Drawing.Point(1378, 104);
+            this.cboBanCanChuyen.Name = "cboBanCanChuyen";
+            this.cboBanCanChuyen.Size = new System.Drawing.Size(147, 24);
+            this.cboBanCanChuyen.TabIndex = 21;
+            // 
+            // btnChuyenBan
+            // 
+            this.btnChuyenBan.Location = new System.Drawing.Point(1551, 92);
+            this.btnChuyenBan.Name = "btnChuyenBan";
+            this.btnChuyenBan.Size = new System.Drawing.Size(78, 47);
+            this.btnChuyenBan.TabIndex = 22;
+            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.UseVisualStyleBackColor = true;
+            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(1397, 71);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(110, 17);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Bàn cần chuyển";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1672, 71);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 17);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Bàn còn trống";
+            // 
             // frmGoiMon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1379, 779);
+            this.ClientSize = new System.Drawing.Size(1808, 779);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnChuyenBan);
+            this.Controls.Add(this.cboBanCanChuyen);
+            this.Controls.Add(this.cboBanConTrong);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.cboBan);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnInHoaDon);
@@ -334,5 +402,11 @@
         private System.Windows.Forms.Button btnInHoaDon;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboBan;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboBanConTrong;
+        private System.Windows.Forms.ComboBox cboBanCanChuyen;
+        private System.Windows.Forms.Button btnChuyenBan;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
