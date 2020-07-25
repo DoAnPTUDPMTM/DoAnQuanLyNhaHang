@@ -138,12 +138,12 @@ namespace BLL_DAL
             }
             else
             {
-                string flag1;
-                var hoadonss = db.HoaDons.OrderByDescending(x => x.MaHoaDon).FirstOrDefault();
-                flag1 = hoadonss.MaHoaDon;
-                string flag2;
-                flag2 = flag1.Substring(2);
-                int sohoadon = int.Parse(flag2) + 1;
+                //string flag1;
+                //var hoadonss = db.HoaDons.OrderByDescending(x => x.MaHoaDon).FirstOrDefault();
+                //flag1 = hoadonss.MaHoaDon;
+                //string flag2;
+                //flag2 = flag1.Substring(2);
+                int sohoadon = db.HoaDons.Count() + 1;
                 mahoadon = "HD" + sohoadon;
 
             }
@@ -176,7 +176,7 @@ namespace BLL_DAL
                 }
             }
             db.SubmitChanges();
-            MessageBox.Show("Thanh toán thành công.");
+            MessageBox.Show("Tổng số tiền của bàn '"+maban+"' là '"+thanhtien+"'.");
         }
 
         

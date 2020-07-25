@@ -64,13 +64,15 @@ namespace DoAnQuanLyNhaHang
             {
                 Button btn = new Button() { Width = 80, Height = 80 };
                 btn.Text = ban.TenBan + Environment.NewLine + ban.TrangThai;
-                //btn.BackgroundImage = DoAnQuanLyNhaHang.Properties.Resources.;
+                btn.Image = DoAnQuanLyNhaHang.Properties.Resources.icons8_restaurant_table_50;
+                btn.ImageAlign = ContentAlignment.TopCenter;
+                btn.TextAlign = ContentAlignment.BottomCenter;
                 btn.Click += Btn_Click;
                 btn.Tag = ban;
                 goimon.setTrangThaiChoBan();
                 if (ban.TrangThai == "Còn trống")
                 {
-                    btn.BackColor = Color.Green;
+                    btn.BackColor = Color.LimeGreen;
 
                 }
                 else
@@ -251,7 +253,7 @@ namespace DoAnQuanLyNhaHang
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            goimon.thanhToan(idBanDaChon,manvdn,double.Parse(txtTongTien.Text));
+            goimon.thanhToan(cboBan.SelectedValue.ToString(),manvdn,double.Parse(txtTongTien.Text));
             loadBans();
             showGoiMon(idBanDaChon);
         }
