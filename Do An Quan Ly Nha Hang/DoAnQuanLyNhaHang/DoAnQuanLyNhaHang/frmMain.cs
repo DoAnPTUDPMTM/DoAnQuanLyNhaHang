@@ -51,6 +51,16 @@ namespace DoAnQuanLyNhaHang
 
             foreach (ToolStripMenuItem item in menuStrip1.Items)
             {
+                foreach (PhanQuyen pq in qltk.getPhanQuyen(manhomtaikhoan))
+                {
+                    if (item.Tag.ToString().Equals(pq.MaManHinh.ToString()))
+                    {
+                        if (pq.CoQuyen == false)
+                        {
+                            item.Enabled = false;
+                        }
+                    }
+                }
                 foreach (ToolStripMenuItem dropDownItem in item.DropDownItems)
                 {
                     foreach (PhanQuyen pq in qltk.getPhanQuyen(manhomtaikhoan))
@@ -62,6 +72,7 @@ namespace DoAnQuanLyNhaHang
                                 dropDownItem.Enabled = false;
                             }
                         }
+                        
                     }
                 }
                 
@@ -114,7 +125,14 @@ namespace DoAnQuanLyNhaHang
 
         private void phânQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form frm = new frmPhanQuyen();
+            if (Application.OpenForms.OfType<frmPhanQuyen>().Any())
+            {
+                Application.OpenForms.OfType<frmPhanQuyen>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -178,6 +196,18 @@ namespace DoAnQuanLyNhaHang
         {
             this.Close();
             
+        }
+
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmDoanhThu();
+            if (Application.OpenForms.OfType<frmDoanhThu>().Any())
+            {
+                Application.OpenForms.OfType<frmDoanhThu>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

@@ -150,7 +150,7 @@ insert into ManHinh VALUES ('SF006',N'Quản lý nhân viên')
 insert into ManHinh VALUES ('SF007',N'Quản lý bàn')
 insert into ManHinh VALUES ('SF008',N'Quản lý thực đơn')
 insert into ManHinh VALUES ('SF009',N'Gọi món')
-
+insert into ManHinh VALUES ('SF010',N'Doanh thu')
 /*----------- Bảng Nhóm tài khoản -----------*/
 CREATE TABLE NhomTaiKhoan
 (
@@ -199,6 +199,7 @@ insert into PhanQuyen values ('NV','SF006',0)
 insert into PhanQuyen values ('NV','SF007',0)
 insert into PhanQuyen values ('NV','SF008',0)
 insert into PhanQuyen values ('NV','SF009',1)
+insert into PhanQuyen values ('NV','SF010',0)
 insert into PhanQuyen values ('QL','SF001',1)
 insert into PhanQuyen values ('QL','SF002',1)
 insert into PhanQuyen values ('QL','SF003',1)
@@ -208,7 +209,7 @@ insert into PhanQuyen values ('QL','SF006',1)
 insert into PhanQuyen values ('QL','SF007',1)
 insert into PhanQuyen values ('QL','SF008',1)
 insert into PhanQuyen values ('QL','SF009',1)
-
+insert into PhanQuyen values ('QL','SF010',1)
 /* ---------- Bảng Gọi Món ----------- */
 CREATE TABLE GoiMon
 (

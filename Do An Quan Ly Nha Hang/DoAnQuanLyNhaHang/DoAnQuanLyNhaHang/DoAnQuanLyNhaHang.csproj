@@ -69,6 +69,12 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoanhThu.Designer.cs">
+      <DependentUpon>frmDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGoiMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoanhThu.resx">
+      <DependentUpon>frmDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGoiMon.resx">
       <DependentUpon>frmGoiMon.cs</DependentUpon>
@@ -224,7 +233,12 @@
     <None Include="Resources\thoat.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-sign-out-50.png" />
+    <None Include="Resources\icons8-waiter-50.png" />
+    <None Include="Resources\icons8-admin-settings-male-50.png" />
     <Content Include="Resources\icons8-restaurant-table-50.png" />
+    <None Include="Resources\icons8-system-task-50.png" />
+    <None Include="Resources\icons8-sales-performance-50.png" />
     <None Include="Resources\icons8-restaurant-table-501.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

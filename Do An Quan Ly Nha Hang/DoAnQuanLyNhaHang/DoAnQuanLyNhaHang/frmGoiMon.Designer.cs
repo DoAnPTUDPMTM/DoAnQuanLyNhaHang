@@ -56,12 +56,14 @@
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMonAnDaGoi)).BeginInit();
             this.flpBan.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -284,7 +286,7 @@
             this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(1373, 9);
+            this.label9.Location = new System.Drawing.Point(1377, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(431, 32);
             this.label9.TabIndex = 19;
@@ -294,7 +296,7 @@
             // cboBanConTrong
             // 
             this.cboBanConTrong.FormattingEnabled = true;
-            this.cboBanConTrong.Location = new System.Drawing.Point(1659, 104);
+            this.cboBanConTrong.Location = new System.Drawing.Point(289, 65);
             this.cboBanConTrong.Name = "cboBanConTrong";
             this.cboBanConTrong.Size = new System.Drawing.Size(137, 24);
             this.cboBanConTrong.TabIndex = 20;
@@ -302,14 +304,14 @@
             // cboBanCanChuyen
             // 
             this.cboBanCanChuyen.FormattingEnabled = true;
-            this.cboBanCanChuyen.Location = new System.Drawing.Point(1378, 104);
+            this.cboBanCanChuyen.Location = new System.Drawing.Point(8, 65);
             this.cboBanCanChuyen.Name = "cboBanCanChuyen";
             this.cboBanCanChuyen.Size = new System.Drawing.Size(147, 24);
             this.cboBanCanChuyen.TabIndex = 21;
             // 
             // btnChuyenBan
             // 
-            this.btnChuyenBan.Location = new System.Drawing.Point(1551, 92);
+            this.btnChuyenBan.Location = new System.Drawing.Point(181, 53);
             this.btnChuyenBan.Name = "btnChuyenBan";
             this.btnChuyenBan.Size = new System.Drawing.Size(78, 47);
             this.btnChuyenBan.TabIndex = 22;
@@ -320,7 +322,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1397, 71);
+            this.label10.Location = new System.Drawing.Point(27, 32);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 17);
             this.label10.TabIndex = 23;
@@ -329,22 +331,31 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1672, 71);
+            this.label11.Location = new System.Drawing.Point(302, 32);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(97, 17);
             this.label11.TabIndex = 24;
             this.label11.Text = "Bàn còn trống";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.cboBanConTrong);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.cboBanCanChuyen);
+            this.groupBox1.Controls.Add(this.btnChuyenBan);
+            this.groupBox1.Location = new System.Drawing.Point(1373, 47);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(435, 119);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            // 
             // frmGoiMon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1808, 779);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.btnChuyenBan);
-            this.Controls.Add(this.cboBanCanChuyen);
-            this.Controls.Add(this.cboBanConTrong);
+            this.ClientSize = new System.Drawing.Size(1820, 779);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cboBan);
             this.Controls.Add(this.label8);
@@ -374,6 +385,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +421,6 @@
         private System.Windows.Forms.Button btnChuyenBan;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

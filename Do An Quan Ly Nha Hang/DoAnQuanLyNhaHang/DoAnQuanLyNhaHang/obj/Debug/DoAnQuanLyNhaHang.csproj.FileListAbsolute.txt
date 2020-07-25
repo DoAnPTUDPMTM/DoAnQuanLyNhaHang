@@ -63,3 +63,4 @@ C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuan
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.Properties.Resources.resources
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.updateAppConfig.resources
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.csproj.GenerateResource.Cache
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.frmDoanhThu.resources
