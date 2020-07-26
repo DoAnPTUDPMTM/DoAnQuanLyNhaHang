@@ -48,6 +48,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboTaiKhoan = new System.Windows.Forms.ComboBox();
             this.grbGioiTinh = new System.Windows.Forms.GroupBox();
             this.radNu = new System.Windows.Forms.RadioButton();
             this.radNam = new System.Windows.Forms.RadioButton();
@@ -57,7 +58,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.dtgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.cboTaiKhoan = new System.Windows.Forms.ComboBox();
             maNhanVienLabel = new System.Windows.Forms.Label();
             tenNhanVienLabel = new System.Windows.Forms.Label();
             ngaySinhLabel = new System.Windows.Forms.Label();
@@ -136,6 +136,15 @@
             diaChiLabel.Size = new System.Drawing.Size(57, 17);
             diaChiLabel.TabIndex = 14;
             diaChiLabel.Text = "Địa Chỉ:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(36, 295);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(75, 17);
+            label1.TabIndex = 23;
+            label1.Text = "Tài khoản:";
             // 
             // dataSet1
             // 
@@ -236,6 +245,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Nhân Viên";
             // 
+            // cboTaiKhoan
+            // 
+            this.cboTaiKhoan.FormattingEnabled = true;
+            this.cboTaiKhoan.Location = new System.Drawing.Point(149, 292);
+            this.cboTaiKhoan.Name = "cboTaiKhoan";
+            this.cboTaiKhoan.Size = new System.Drawing.Size(200, 24);
+            this.cboTaiKhoan.TabIndex = 22;
+            // 
             // grbGioiTinh
             // 
             this.grbGioiTinh.Controls.Add(this.radNu);
@@ -325,23 +342,6 @@
             this.dtgvNhanVien.Size = new System.Drawing.Size(1318, 291);
             this.dtgvNhanVien.TabIndex = 21;
             this.dtgvNhanVien.SelectionChanged += new System.EventHandler(this.dtgvNhanVien_SelectionChanged);
-            // 
-            // cboTaiKhoan
-            // 
-            this.cboTaiKhoan.FormattingEnabled = true;
-            this.cboTaiKhoan.Location = new System.Drawing.Point(149, 292);
-            this.cboTaiKhoan.Name = "cboTaiKhoan";
-            this.cboTaiKhoan.Size = new System.Drawing.Size(200, 24);
-            this.cboTaiKhoan.TabIndex = 22;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(36, 295);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(75, 17);
-            label1.TabIndex = 23;
-            label1.Text = "Tài khoản:";
             // 
             // frmNhanVien
             // 

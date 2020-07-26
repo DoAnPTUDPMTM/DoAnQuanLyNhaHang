@@ -45,7 +45,29 @@ namespace DoAnQuanLyNhaHang
         }
         private void loadDatagridviewNhanVien()
         {
-            dtgvNhanVien.DataSource = nv.getNhanViens();
+            DataTable dtNhanVien = new DataTable();
+            dtNhanVien.Columns.Add("Mã NV");
+            dtNhanVien.Columns.Add("Tên NV");
+            dtNhanVien.Columns.Add("Ngày sinh");
+            dtNhanVien.Columns.Add("Giới tính");
+            dtNhanVien.Columns.Add("Điện thoại");
+            dtNhanVien.Columns.Add("Email");
+            dtNhanVien.Columns.Add("Địa chỉ");
+            dtNhanVien.Columns.Add("Tên đăng nhập");
+            foreach (NhanVien nv in nv.getNhanViens())
+            {
+                DataRow newRow = dtNhanVien.NewRow();
+                newRow["Mã NV"] = nv.MaNhanVien;
+                newRow["Tên NV"] = nv.TenNhanVien;
+                newRow["Ngày sinh"] = nv.NgaySinh;
+                newRow["Giới tính"] = nv.GioiTinh;
+                newRow["Điện thoại"] = nv.DienThoai;
+                newRow["Email"] = nv.Email;
+                newRow["Địa chỉ"] = nv.DiaChi;
+                newRow["Tên đăng nhập"] = nv.TenDangNhap;
+                dtNhanVien.Rows.Add(newRow);
+            }
+            dtgvNhanVien.DataSource = dtNhanVien;
         }
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
@@ -57,7 +79,7 @@ namespace DoAnQuanLyNhaHang
         }
         private void loadComboboxTaiKhoan()
         {
-            cboTaiKhoan.Items.Add("<<Không chọn>>");
+            
             cboTaiKhoan.DataSource = nv.getTaiKhoanChuaCoDung();
             cboTaiKhoan.DisplayMember = "TenDangNhap";
         }
@@ -185,11 +207,26 @@ namespace DoAnQuanLyNhaHang
             }
             try
             {
-                this.Validate();
-                this.nhanVienBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.dataSet1);
+                string gioitinh = "";
+                if (radNam.Checked)
+                {
+                    gioitinh = "Nam";
+                }
+                else
+                {
+                    gioitinh = "Nữ";
+                }
+                bool flag = nv.suaNhanVien(txtMaNhanVien.Text, txtTenNhanVien.Text, dtpNgaySinh.Text, gioitinh, txtDienThoai.Text, txtEmail.Text, txtDiaChi.Text,cboTaiKhoan.Text);
+                if(flag)
+                {
+                    loadDatagridviewNhanVien();
+                    loadComboboxTaiKhoan();
+                }
+                else
+                {
+                    return;
+                }
                 
-                MessageBox.Show("Lưu thành công");
             }
             catch (Exception ex)
             {

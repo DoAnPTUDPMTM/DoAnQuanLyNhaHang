@@ -67,14 +67,18 @@ namespace BLL_DAL
             Ban ban = qlnh.Bans.Where(a => a.MaBan == maban).FirstOrDefault();
             if (ban != null)
             {
-                ban.MaBan = maban;
+                
                 ban.TenBan = tenban;
                 ban.TrangThai = trangthai;
                 qlnh.SubmitChanges();
                 MessageBox.Show("Sửa thành công.");
                 return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
+            
         }
         public void loadBans()
         {

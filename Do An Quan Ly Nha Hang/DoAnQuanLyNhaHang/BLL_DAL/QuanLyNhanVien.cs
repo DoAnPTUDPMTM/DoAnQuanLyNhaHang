@@ -198,5 +198,25 @@ namespace BLL_DAL
                                         select taikhoan;
             return taikhoans.Except(taikhoantrongnhanvien);
         }
+
+        public bool suaNhanVien(string manv, string tennv, string ngaysinh, string gioitinh, string dienthoai, string email, string diachi, string tendangnhap)      
+        {
+            NhanVien nv = db.NhanViens.Where(a => a.MaNhanVien == manv).FirstOrDefault();
+            if (nv != null)
+            {                
+                nv.TenNhanVien = tennv;
+                nv.NgaySinh = Convert.ToDateTime(ngaysinh);
+                nv.GioiTinh = gioitinh;
+                nv.DienThoai = dienthoai;
+                nv.Email = email;
+                nv.DiaChi = diachi;
+                nv.TenDangNhap = tendangnhap;
+                db.SubmitChanges();
+                MessageBox.Show("Lưu thành công");
+                return true;
+            }
+            MessageBox.Show("Lưu thất bại.");
+            return false;
+        }
     }
 }

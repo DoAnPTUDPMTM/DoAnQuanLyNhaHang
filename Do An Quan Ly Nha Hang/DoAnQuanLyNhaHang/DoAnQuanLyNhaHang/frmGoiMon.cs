@@ -286,6 +286,11 @@ namespace DoAnQuanLyNhaHang
 
         private void btnChuyenBan_Click(object sender, EventArgs e)
         {
+            if(cboBanCanChuyen.Text=="")
+            {
+                MessageBox.Show("Chuyển bàn thất bại.");
+                return;
+            }
             if(MessageBox.Show("Bạn có chắc muốn chuyển bàn '"+cboBanCanChuyen.Text+"' sang bàn '"+cboBanConTrong.Text+"' không?","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2) == DialogResult.No)
             {
                 return;
