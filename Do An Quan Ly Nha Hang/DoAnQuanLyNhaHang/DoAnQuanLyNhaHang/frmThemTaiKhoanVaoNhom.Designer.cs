@@ -51,6 +51,11 @@
             this.taiKhoanNhomTaiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.taiKhoanNhomTaiKhoanTableAdapter = new DoAnQuanLyNhaHang.DataSet1TableAdapters.TaiKhoanNhomTaiKhoanTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanTrongNhomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanTrongNhomDataGridView)).BeginInit();
@@ -58,6 +63,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanNhomTaiKhoanBindingSource)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataSet1
@@ -77,8 +86,10 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BanTableAdapter = null;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.ManHinhTableAdapter = null;
+            this.tableAdapterManager.NhanVienTableAdapter = null;
             this.tableAdapterManager.NhomTaiKhoanTableAdapter = null;
             this.tableAdapterManager.TaiKhoanNhomTaiKhoanTableAdapter = null;
             this.tableAdapterManager.TaiKhoanTableAdapter = null;
@@ -94,11 +105,12 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.taiKhoanTrongNhomDataGridView.DataSource = this.taiKhoanTrongNhomBindingSource;
-            this.taiKhoanTrongNhomDataGridView.Location = new System.Drawing.Point(634, 107);
+            this.taiKhoanTrongNhomDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.taiKhoanTrongNhomDataGridView.Location = new System.Drawing.Point(791, 79);
             this.taiKhoanTrongNhomDataGridView.Name = "taiKhoanTrongNhomDataGridView";
             this.taiKhoanTrongNhomDataGridView.RowTemplate.Height = 24;
             this.taiKhoanTrongNhomDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.taiKhoanTrongNhomDataGridView.Size = new System.Drawing.Size(486, 401);
+            this.taiKhoanTrongNhomDataGridView.Size = new System.Drawing.Size(640, 302);
             this.taiKhoanTrongNhomDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -133,7 +145,7 @@
             this.nhomTaiKhoanComboBox.DataSource = this.nhomTaiKhoanBindingSource;
             this.nhomTaiKhoanComboBox.DisplayMember = "TenNhomTaiKhoan";
             this.nhomTaiKhoanComboBox.FormattingEnabled = true;
-            this.nhomTaiKhoanComboBox.Location = new System.Drawing.Point(751, 62);
+            this.nhomTaiKhoanComboBox.Location = new System.Drawing.Point(323, 33);
             this.nhomTaiKhoanComboBox.Name = "nhomTaiKhoanComboBox";
             this.nhomTaiKhoanComboBox.Size = new System.Drawing.Size(203, 24);
             this.nhomTaiKhoanComboBox.TabIndex = 2;
@@ -159,11 +171,12 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewCheckBoxColumn1});
             this.taiKhoanDataGridView.DataSource = this.taiKhoanBindingSource;
-            this.taiKhoanDataGridView.Location = new System.Drawing.Point(12, 107);
+            this.taiKhoanDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.taiKhoanDataGridView.Location = new System.Drawing.Point(3, 79);
             this.taiKhoanDataGridView.Name = "taiKhoanDataGridView";
             this.taiKhoanDataGridView.RowTemplate.Height = 24;
             this.taiKhoanDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.taiKhoanDataGridView.Size = new System.Drawing.Size(488, 401);
+            this.taiKhoanDataGridView.Size = new System.Drawing.Size(639, 302);
             this.taiKhoanDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn4
@@ -186,9 +199,10 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(515, 206);
+            this.btnThem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnThem.Location = new System.Drawing.Point(30, 93);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(99, 56);
+            this.btnThem.Size = new System.Drawing.Size(76, 54);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = ">>>";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -196,9 +210,10 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(515, 376);
+            this.btnXoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnXoa.Location = new System.Drawing.Point(30, 153);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(99, 56);
+            this.btnXoa.Size = new System.Drawing.Size(76, 54);
             this.btnXoa.TabIndex = 5;
             this.btnXoa.Text = "<<<";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -216,23 +231,103 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(634, 65);
+            this.label1.Location = new System.Drawing.Point(3, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nhóm tài khoản:";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1440, 650);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel2.Controls.Add(this.taiKhoanTrongNhomDataGridView, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.taiKhoanDataGridView, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 165);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1434, 384);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.nhomTaiKhoanComboBox, 1, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(791, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(640, 70);
+            this.tableLayoutPanel3.TabIndex = 4;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.btnThem, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.btnXoa, 1, 2);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(648, 79);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 4;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(137, 302);
+            this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Gold;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("UTM Magnesium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1434, 65);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Thêm tài khoản vào nhóm";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmThemTaiKhoanVaoNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1140, 528);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.taiKhoanDataGridView);
-            this.Controls.Add(this.nhomTaiKhoanComboBox);
-            this.Controls.Add(this.taiKhoanTrongNhomDataGridView);
+            this.ClientSize = new System.Drawing.Size(1440, 650);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmThemTaiKhoanVaoNhom";
             this.Text = "frmThemTaiKhoanVaoNhom";
             this.Load += new System.EventHandler(this.frmThemTaiKhoanVaoNhom_Load);
@@ -243,8 +338,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanNhomTaiKhoanBindingSource)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -272,5 +372,10 @@
         private System.Windows.Forms.BindingSource taiKhoanNhomTaiKhoanBindingSource;
         private DataSet1TableAdapters.TaiKhoanNhomTaiKhoanTableAdapter taiKhoanNhomTaiKhoanTableAdapter;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label label2;
     }
 }

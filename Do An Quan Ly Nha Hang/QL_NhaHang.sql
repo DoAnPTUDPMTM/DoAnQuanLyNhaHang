@@ -38,11 +38,12 @@ insert into Ban values
 			('BAN01',N'Bàn 1',N'Đã có khách'),
 			('BAN02',N'Bàn 2',N'Đã có khách'),
 			('BAN03',N'Bàn 3',N'Còn trống')
-insert into Ban values ('Ban04',N'Bàn 4', N'Còn trống')
-insert into Ban values ('Ban05',N'Bàn 5', N'Còn trống')
-insert into Ban values ('Ban06',N'Bàn 6', N'Còn trống')
-insert into Ban values ('Ban07',N'Bàn 7', N'Còn trống')
-insert into Ban values ('Ban08',N'Bàn 8', N'Còn trống')
+insert into Ban values ('BAN04',N'Bàn 4', N'Còn trống')
+insert into Ban values ('BAN05',N'Bàn 5', N'Còn trống')
+insert into Ban values ('BAN06',N'Bàn 6', N'Còn trống')
+insert into Ban values ('BAN07',N'Bàn 7', N'Còn trống')
+insert into Ban values ('BAN08',N'Bàn 8', N'Còn trống')
+DELETE FROM Ban
 GO
 /*----------- Bảng Loại Thực Đơn -----------*/
 CREATE TABLE LoaiThucDon

@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.lblTenNhanVien = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhómTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +42,9 @@
             this.gọiMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblTenNhanVien = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +52,7 @@
             // menuStrip1
             // 
             this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Tan;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
@@ -64,34 +65,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1129, 55);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // lblTenNhanVien
-            // 
-            this.lblTenNhanVien.AutoSize = true;
-            this.lblTenNhanVien.Location = new System.Drawing.Point(69, 10);
-            this.lblTenNhanVien.Name = "lblTenNhanVien";
-            this.lblTenNhanVien.Size = new System.Drawing.Size(46, 17);
-            this.lblTenNhanVien.TabIndex = 1;
-            this.lblTenNhanVien.Text = "label1";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lblTenNhanVien);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 541);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1129, 36);
-            this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tên NV:";
             // 
             // hệThốngToolStripMenuItem
             // 
@@ -106,6 +79,8 @@
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(106, 51);
             this.hệThốngToolStripMenuItem.Tag = "0";
             this.hệThốngToolStripMenuItem.Text = "Hệ Thống";
+            this.hệThốngToolStripMenuItem.MouseEnter += new System.EventHandler(this.hệThốngToolStripMenuItem_MouseEnter);
+            this.hệThốngToolStripMenuItem.MouseHover += new System.EventHandler(this.hệThốngToolStripMenuItem_MouseHover);
             // 
             // tàiKhoảnToolStripMenuItem
             // 
@@ -210,6 +185,34 @@
             this.btnDoanhThu.Tag = "SF010";
             this.btnDoanhThu.Text = "Doanh Thu";
             this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
+            // 
+            // lblTenNhanVien
+            // 
+            this.lblTenNhanVien.AutoSize = true;
+            this.lblTenNhanVien.Location = new System.Drawing.Point(69, 10);
+            this.lblTenNhanVien.Name = "lblTenNhanVien";
+            this.lblTenNhanVien.Size = new System.Drawing.Size(46, 17);
+            this.lblTenNhanVien.TabIndex = 1;
+            this.lblTenNhanVien.Text = "label1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblTenNhanVien);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 541);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1129, 36);
+            this.panel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tên NV:";
             // 
             // frmMain
             // 

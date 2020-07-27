@@ -209,5 +209,15 @@ namespace DoAnQuanLyNhaHang
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void hệThốngToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void hệThốngToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -129,9 +129,9 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.BackColor = System.Drawing.Color.Gold;
+            this.label1.Font = new System.Drawing.Font("UTM Magnesium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(482, 32);
@@ -141,9 +141,9 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.BackColor = System.Drawing.Color.Gold;
+            this.label2.Font = new System.Drawing.Font("UTM Magnesium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(500, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(867, 32);
@@ -173,9 +173,9 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.BackColor = System.Drawing.Color.Gold;
+            this.label3.Font = new System.Drawing.Font("UTM Magnesium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(500, 391);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(867, 32);
@@ -283,9 +283,9 @@
             // 
             // label9
             // 
-            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Blue;
+            this.label9.BackColor = System.Drawing.Color.Gold;
+            this.label9.Font = new System.Drawing.Font("UTM Magnesium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(1377, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(431, 32);
@@ -354,6 +354,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1820, 779);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
@@ -377,7 +378,7 @@
             this.Controls.Add(this.flpBan);
             this.Controls.Add(this.panel2);
             this.Name = "frmGoiMon";
-            this.Text = "d";
+            this.Text = "Gọi món";
             this.Load += new System.EventHandler(this.frmGoiMon_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMonAnDaGoi)).EndInit();

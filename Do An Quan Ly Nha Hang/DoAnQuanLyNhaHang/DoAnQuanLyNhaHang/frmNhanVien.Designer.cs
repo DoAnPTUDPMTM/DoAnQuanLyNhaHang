@@ -222,6 +222,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(label1);
             this.groupBox1.Controls.Add(this.cboTaiKhoan);
             this.groupBox1.Controls.Add(this.grbGioiTinh);
@@ -347,6 +348,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1321, 721);
             this.Controls.Add(this.dtgvNhanVien);
             this.Controls.Add(this.btnDong);
