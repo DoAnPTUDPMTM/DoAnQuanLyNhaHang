@@ -155,7 +155,7 @@ namespace BLL_DAL
             hd.MaBan = maban;
             hd.MaNhanVien = manhanvien;
             hd.ThanhTien = thanhtien;
-
+            
             db.HoaDons.InsertOnSubmit(hd);
             // thêm chi tiết hoá đơn
             var goimon = from gm in db.GoiMons where gm.MaBan == maban select gm;
@@ -208,6 +208,17 @@ namespace BLL_DAL
         {
             var bans = from ban in db.Bans where ban.TrangThai == "Đã có khách" select ban;
             return bans;
+        }
+
+        public IEnumerable<LoaiThucDon> loadComboboxLoaiThucDon()
+        {
+            var ltd = from l in db.LoaiThucDons select l;
+            return ltd;
+        }
+        public IEnumerable<ThucDon> loadComboboxThucDon(string maloai)
+        {
+            var Td = from td in db.ThucDons where td.MaLoaiThucDon == maloai select td;
+            return Td;
         }
     }
 }

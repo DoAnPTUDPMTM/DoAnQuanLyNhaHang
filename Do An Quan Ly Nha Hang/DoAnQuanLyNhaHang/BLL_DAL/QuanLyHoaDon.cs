@@ -13,5 +13,17 @@ namespace BLL_DAL
         {
 
         }
+
+        public IEnumerable<HoaDon> getHoaDons()
+        {
+            var HoaDons = from hd in db.HoaDons select hd;
+            return HoaDons;
+        }
+
+        public IEnumerable<ChiTietHoaDon> getChiTietHoaDons(string mahoadon)
+        {
+            var ChiTietHoaDons = from cthd in db.ChiTietHoaDons where cthd.MaHoaDon == mahoadon select cthd;
+            return ChiTietHoaDons;
+        }
     }
 }

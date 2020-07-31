@@ -45,6 +45,7 @@
             this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.quảnLýHoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -127,7 +128,8 @@
             this.nghiệpVụToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýNhânViênToolStripMenuItem,
             this.quảnLýBànToolStripMenuItem,
-            this.quảnLýThựcĐơnToolStripMenuItem});
+            this.quảnLýThựcĐơnToolStripMenuItem,
+            this.quảnLýHoáĐơnToolStripMenuItem});
             this.nghiệpVụToolStripMenuItem.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_admin_settings_male_50;
             this.nghiệpVụToolStripMenuItem.Name = "nghiệpVụToolStripMenuItem";
             this.nghiệpVụToolStripMenuItem.Size = new System.Drawing.Size(111, 51);
@@ -214,6 +216,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên NV:";
             // 
+            // quảnLýHoáĐơnToolStripMenuItem
+            // 
+            this.quảnLýHoáĐơnToolStripMenuItem.Name = "quảnLýHoáĐơnToolStripMenuItem";
+            this.quảnLýHoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.quảnLýHoáĐơnToolStripMenuItem.Tag = "SF011";
+            this.quảnLýHoáĐơnToolStripMenuItem.Text = "Quản Lý Hoá Đơn";
+            this.quảnLýHoáĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýHoáĐơnToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -253,5 +263,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem btnDangXuat;
         private System.Windows.Forms.ToolStripMenuItem btnDoanhThu;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýHoáĐơnToolStripMenuItem;
     }
 }

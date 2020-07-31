@@ -43,7 +43,7 @@ insert into Ban values ('BAN05',N'Bàn 5', N'Còn trống')
 insert into Ban values ('BAN06',N'Bàn 6', N'Còn trống')
 insert into Ban values ('BAN07',N'Bàn 7', N'Còn trống')
 insert into Ban values ('BAN08',N'Bàn 8', N'Còn trống')
-DELETE FROM Ban
+
 GO
 /*----------- Bảng Loại Thực Đơn -----------*/
 CREATE TABLE LoaiThucDon
@@ -81,7 +81,28 @@ insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values
 				('TD001','LTD01',N'Cafe đen',6000,'Còn hàng'),
 				('TD002','LTD01',N'Cafe Sữa',7000,'Còn hàng'),
 				('TD003','LTD01',N'Cafe sài gòn',9000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD004','LTD09',N'Cơm chiên dương châu',75000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD005','LTD09',N'Cơm chiên cá mặn',78000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD006','LTD11',N'Bánh bao kim sa',70000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD007','LTD11',N'Bánh bao thịt ( trứng muối )',34000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD008','LTD04',N'Nước suối Dasani',6000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD009','LTD06',N'Sinh tố dâu',35000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD010','LTD04',N'Nước cam Twitter',15000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD011','LTD12',N'Hàu nướng phô mai ( 5 con )',50000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD012','LTD07',N'Rau câu dừa',35000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD013','LTD05',N'Bia Tiger',15000,'Còn hàng')
 
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD014','LTD05',N'Bia Sài Gòn',12000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD015','LTD05',N'Bia Heineken',22000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD016','LTD05',N'Bia 333',17000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD017','LTD02',N'Sữa tươi trân châu đường đen',45000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD018','LTD02',N'Trà sữa truyền thống',38000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD019','LTD03',N'Hồng trà trân châu đen',32000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD020','LTD03',N'Hồng trà tắc',28000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD021','LTD03',N'Trà Lipton',28000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD022','LTD03',N'Trà atiso',28000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD023','LTD12',N'Tôm hùm nướng (con)',550000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD024','LTD12',N'Nghêu hấp xả',80000,'Còn hàng')
 GO
 /*----------- Bảng Khách Hàng -----------*/
 CREATE TABLE KhachHang
@@ -152,6 +173,7 @@ insert into ManHinh VALUES ('SF007',N'Quản lý bàn')
 insert into ManHinh VALUES ('SF008',N'Quản lý thực đơn')
 insert into ManHinh VALUES ('SF009',N'Gọi món')
 insert into ManHinh VALUES ('SF010',N'Doanh thu')
+insert into ManHinh VALUES ('SF011',N'Quản lý hoá đơn')
 /*----------- Bảng Nhóm tài khoản -----------*/
 CREATE TABLE NhomTaiKhoan
 (
@@ -172,7 +194,7 @@ CREATE TABLE TaiKhoanNhomTaiKhoan
 	CONSTRAINT PK_TaiKhoanNhomTaiKhoan_TenDangNhap_MaNhomTaiKhoan PRIMARY KEY (MaNhomTaiKhoan,TenDangNhap),
 	CONSTRAINT FK_TaiKhoanNhomTaiKhoan_TenDangNhap_TenDangNhap FOREIGN KEY (TenDangNhap) REFERENCES TaiKhoan(TenDangNhap)
 )
-DROP TABLE TaiKhoanNhomTaiKhoan
+
 insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000001','QL',null)
 insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000002','NV',null)
 insert into TaiKhoanNhomTaiKhoan VALUES ('NV00000003','NV',null)
@@ -201,6 +223,7 @@ insert into PhanQuyen values ('NV','SF007',0)
 insert into PhanQuyen values ('NV','SF008',0)
 insert into PhanQuyen values ('NV','SF009',1)
 insert into PhanQuyen values ('NV','SF010',0)
+insert into PhanQuyen values ('NV','SF011',0)
 insert into PhanQuyen values ('QL','SF001',1)
 insert into PhanQuyen values ('QL','SF002',1)
 insert into PhanQuyen values ('QL','SF003',1)
@@ -211,6 +234,7 @@ insert into PhanQuyen values ('QL','SF007',1)
 insert into PhanQuyen values ('QL','SF008',1)
 insert into PhanQuyen values ('QL','SF009',1)
 insert into PhanQuyen values ('QL','SF010',1)
+insert into PhanQuyen values ('QL','SF011',1)
 /* ---------- Bảng Gọi Món ----------- */
 CREATE TABLE GoiMon
 (

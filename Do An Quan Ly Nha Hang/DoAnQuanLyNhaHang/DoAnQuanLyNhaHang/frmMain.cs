@@ -219,5 +219,17 @@ namespace DoAnQuanLyNhaHang
         {
             
         }
+
+        private void quảnLýHoáĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmHoaDon();
+            if (Application.OpenForms.OfType<frmHoaDon>().Any())
+            {
+                Application.OpenForms.OfType<frmHoaDon>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

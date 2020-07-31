@@ -27,14 +27,23 @@ namespace DoAnQuanLyNhaHang
             InitializeComponent();
             manvdn = manv;
         }
+        public void loadComboboxLoaiThucDon()
+        {
+            cboLoaiThucDon.DataSource = goimon.loadComboboxLoaiThucDon();
+            cboLoaiThucDon.DisplayMember = "TenLoaiThucDon";
+            cboLoaiThucDon.ValueMember = "MaLoaiThucDon";
+            cboLoaiThucDon.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
         private void frmGoiMon_Load(object sender, EventArgs e)
         {
             loadBans();
             loadMenu();
+            loadComboboxLoaiThucDon();
             loadComboboxThucDon();
             loadComboboxBan();
             loadComboboxBanCanChuyen();
             loadComboboxBanTrong();
+            
         }
         private void loadMenu()
         {
@@ -183,7 +192,8 @@ namespace DoAnQuanLyNhaHang
         private void loadComboboxThucDon()
         {
             cboTenThucDon.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboTenThucDon.DataSource = thucdon.getThucDons();
+            string maloai = cboLoaiThucDon.SelectedValue.ToString();
+            cboTenThucDon.DataSource = goimon.loadComboboxThucDon(maloai);
             cboTenThucDon.DisplayMember = "TenThucDon";
             cboTenThucDon.ValueMember = "MaThucDon";
         }
@@ -310,6 +320,11 @@ namespace DoAnQuanLyNhaHang
                 }
             }
             
+        }
+
+        private void cboLoaiThucDon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadComboboxThucDon();
         }
     }
 }
