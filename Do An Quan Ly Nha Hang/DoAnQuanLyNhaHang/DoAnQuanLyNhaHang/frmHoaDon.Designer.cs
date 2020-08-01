@@ -33,7 +33,6 @@
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtMaThucDon = new System.Windows.Forms.TextBox();
-            this.txtMaHoaDon_CTHD = new System.Windows.Forms.TextBox();
             this.txtMaChiTietHoaDon = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.txtMaHoaDon = new System.Windows.Forms.TextBox();
             this.txtMaKhachHang = new System.Windows.Forms.TextBox();
             this.txtMaBan = new System.Windows.Forms.TextBox();
+            this.cboMaHoaDon = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -76,6 +76,7 @@
             // 
             this.txtThanhTien.Location = new System.Drawing.Point(272, 193);
             this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.ReadOnly = true;
             this.txtThanhTien.Size = new System.Drawing.Size(188, 23);
             this.txtThanhTien.TabIndex = 21;
             // 
@@ -92,13 +93,6 @@
             this.txtMaThucDon.Name = "txtMaThucDon";
             this.txtMaThucDon.Size = new System.Drawing.Size(188, 23);
             this.txtMaThucDon.TabIndex = 19;
-            // 
-            // txtMaHoaDon_CTHD
-            // 
-            this.txtMaHoaDon_CTHD.Location = new System.Drawing.Point(272, 136);
-            this.txtMaHoaDon_CTHD.Name = "txtMaHoaDon_CTHD";
-            this.txtMaHoaDon_CTHD.Size = new System.Drawing.Size(188, 23);
-            this.txtMaHoaDon_CTHD.TabIndex = 18;
             // 
             // txtMaChiTietHoaDon
             // 
@@ -170,6 +164,7 @@
             // groupControl2
             // 
             this.groupControl2.CaptionImageOptions.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_bill_48;
+            this.groupControl2.Controls.Add(this.cboMaHoaDon);
             this.groupControl2.Controls.Add(this.btnThemChiTietHoaDon);
             this.groupControl2.Controls.Add(this.dtgvChiTietHoaDon);
             this.groupControl2.Controls.Add(this.btnXoaChiTietHoaDon);
@@ -184,7 +179,6 @@
             this.groupControl2.Controls.Add(this.label10);
             this.groupControl2.Controls.Add(this.txtMaThucDon);
             this.groupControl2.Controls.Add(this.label11);
-            this.groupControl2.Controls.Add(this.txtMaHoaDon_CTHD);
             this.groupControl2.Location = new System.Drawing.Point(968, 75);
             this.groupControl2.LookAndFeel.SkinMaskColor = System.Drawing.Color.DarkSeaGreen;
             this.groupControl2.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.Transparent;
@@ -205,6 +199,7 @@
             this.btnThemChiTietHoaDon.Size = new System.Drawing.Size(101, 38);
             this.btnThemChiTietHoaDon.TabIndex = 23;
             this.btnThemChiTietHoaDon.Text = "Thêm";
+            this.btnThemChiTietHoaDon.Click += new System.EventHandler(this.btnThemChiTietHoaDon_Click);
             // 
             // btnXoaChiTietHoaDon
             // 
@@ -216,6 +211,7 @@
             this.btnXoaChiTietHoaDon.Size = new System.Drawing.Size(101, 38);
             this.btnXoaChiTietHoaDon.TabIndex = 23;
             this.btnXoaChiTietHoaDon.Text = "Xoá";
+            this.btnXoaChiTietHoaDon.Click += new System.EventHandler(this.btnXoaChiTietHoaDon_Click);
             // 
             // btnSuaChiTietHoaDon
             // 
@@ -227,6 +223,7 @@
             this.btnSuaChiTietHoaDon.Size = new System.Drawing.Size(101, 38);
             this.btnSuaChiTietHoaDon.TabIndex = 23;
             this.btnSuaChiTietHoaDon.Text = "Sửa";
+            this.btnSuaChiTietHoaDon.Click += new System.EventHandler(this.btnSuaChiTietHoaDon_Click);
             // 
             // btnDongChiTietHoaDon
             // 
@@ -238,6 +235,7 @@
             this.btnDongChiTietHoaDon.Size = new System.Drawing.Size(101, 38);
             this.btnDongChiTietHoaDon.TabIndex = 23;
             this.btnDongChiTietHoaDon.Text = "Đóng";
+            this.btnDongChiTietHoaDon.Click += new System.EventHandler(this.btnDongChiTietHoaDon_Click);
             // 
             // groupControl1
             // 
@@ -302,6 +300,7 @@
             this.btnDongHoaDon.Size = new System.Drawing.Size(101, 38);
             this.btnDongHoaDon.TabIndex = 22;
             this.btnDongHoaDon.Text = "Đóng";
+            this.btnDongHoaDon.Click += new System.EventHandler(this.btnDongHoaDon_Click);
             // 
             // label1
             // 
@@ -437,6 +436,15 @@
             this.txtMaBan.Size = new System.Drawing.Size(188, 23);
             this.txtMaBan.TabIndex = 8;
             // 
+            // cboMaHoaDon
+            // 
+            this.cboMaHoaDon.FormattingEnabled = true;
+            this.cboMaHoaDon.Location = new System.Drawing.Point(272, 133);
+            this.cboMaHoaDon.Name = "cboMaHoaDon";
+            this.cboMaHoaDon.Size = new System.Drawing.Size(188, 24);
+            this.cboMaHoaDon.TabIndex = 24;
+            this.cboMaHoaDon.SelectedIndexChanged += new System.EventHandler(this.cboMaHoaDon_SelectedIndexChanged);
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -478,7 +486,6 @@
         private System.Windows.Forms.TextBox txtThanhTien;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.TextBox txtMaThucDon;
-        private System.Windows.Forms.TextBox txtMaHoaDon_CTHD;
         private System.Windows.Forms.TextBox txtMaChiTietHoaDon;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -495,5 +502,6 @@
         private DevExpress.XtraEditors.SimpleButton btnDongChiTietHoaDon;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
+        private System.Windows.Forms.ComboBox cboMaHoaDon;
     }
 }

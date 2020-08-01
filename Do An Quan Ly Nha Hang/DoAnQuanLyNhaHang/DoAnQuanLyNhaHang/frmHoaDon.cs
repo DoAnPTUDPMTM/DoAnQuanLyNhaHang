@@ -23,10 +23,15 @@ namespace DoAnQuanLyNhaHang
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             loadDatagridviewHoaDon();
-
+            loadComboboxHoaDon();
             //loadDatagridviewChiTietHoaDon();
         }
-
+        private void loadComboboxHoaDon()
+        {
+            cboMaHoaDon.DataSource = qlhd.loadComboboxHoaDon();
+            cboMaHoaDon.DisplayMember = "MaHoaDon";
+            cboMaHoaDon.ValueMember = "MaHoaDon";
+        }
         public void loadDatagridviewHoaDon()
         {
             dtHoaDon = new DataTable();
@@ -86,7 +91,8 @@ namespace DoAnQuanLyNhaHang
             txtTongTien.Text = dtgvHoaDon.CurrentRow.Cells[5].Value.ToString();
 
             // bên dtgvChiTietHoaDOn sẽ hiện lên
-            loadDatagridviewChiTietHoaDon(dtgvHoaDon.CurrentRow.Cells[0].Value.ToString());
+            //loadDatagridviewChiTietHoaDon(dtgvHoaDon.CurrentRow.Cells[0].Value.ToString());
+            cboMaHoaDon.SelectedValue = dtgvHoaDon.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void btnThemHoaDon_Click(object sender, EventArgs e)
@@ -102,7 +108,8 @@ namespace DoAnQuanLyNhaHang
 
         private void btnSuaHoaDon_Click(object sender, EventArgs e)
         {
-            
+            qlhd.luuHoaDon(txtMaHoaDon.Text, dtpNgayTao.Text, txtMaBan.Text, txtMaNhanVien.Text, txtMaKhachHang.Text, txtTongTien.Text);
+            loadDatagridviewHoaDon();
 
         }
 
@@ -125,7 +132,71 @@ namespace DoAnQuanLyNhaHang
 
         private void dtgvChiTietHoaDon_SelectionChanged(object sender, EventArgs e)
         {
+            txtMaChiTietHoaDon.Text = dtgvChiTietHoaDon.CurrentRow.Cells[0].Value.ToString();
 
+            txtMaThucDon.Text = dtgvChiTietHoaDon.CurrentRow.Cells[2].Value.ToString();
+            txtSoLuong.Text = dtgvChiTietHoaDon.CurrentRow.Cells[3].Value.ToString();
+            txtThanhTien.Text = dtgvChiTietHoaDon.CurrentRow.Cells[4].Value.ToString();
+        }
+
+        private void btnDongHoaDon_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDongChiTietHoaDon_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnThemChiTietHoaDon_Click(object sender, EventArgs e)
+        {
+            
+            qlhd.themChiTietHoaDon(cboMaHoaDon.Text, txtMaThucDon.Text, txtSoLuong.Text);
+            loadDatagridviewChiTietHoaDon(cboMaHoaDon.Text);
+            loadDatagridviewHoaDon();
+        }
+
+        private void cboMaHoaDon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dtChiTietHoaDon = new DataTable();
+            dtChiTietHoaDon.Columns.Add("Mã Chi Tiết Hoá Đơn");
+            dtChiTietHoaDon.Columns.Add("Mã Hoá Đơn");
+            dtChiTietHoaDon.Columns.Add("Mã Thực Đơn");
+            dtChiTietHoaDon.Columns.Add("Số Lượng");
+            dtChiTietHoaDon.Columns.Add("Thành Tiền");
+
+            foreach (ChiTietHoaDon hd in qlhd.loadDatagridviewChiTietHoaDonByCombobox(cboMaHoaDon.Text))
+            {
+                DataRow newRow = dtChiTietHoaDon.NewRow();
+                newRow["Mã Chi Tiết Hoá Đơn"] = hd.MaChiTietHoaDon;
+                newRow["Mã Hoá Đơn"] = hd.MaHoaDon;
+                newRow["Mã Thực Đơn"] = hd.MaThucDon;
+                newRow["Số Lượng"] = hd.SoLuong;
+                newRow["Thành Tiền"] = hd.ThanhTien;
+
+                dtChiTietHoaDon.Rows.Add(newRow);
+            }
+            dtgvChiTietHoaDon.DataSource = dtChiTietHoaDon;
+        }
+
+        private void btnXoaChiTietHoaDon_Click(object sender, EventArgs e)
+        {
+            string ma = dtgvChiTietHoaDon.CurrentRow.Cells[0].Value.ToString();
+            qlhd.xoaChiTietHoaDon(ma);
+            loadDatagridviewHoaDon();
+            loadDatagridviewChiTietHoaDon(cboMaHoaDon.Text);
+        }
+
+        private void btnSuaChiTietHoaDon_Click(object sender, EventArgs e)
+        {
+            string machitiethoadon = txtMaChiTietHoaDon.Text;
+            string mathucdon = txtMaThucDon.Text;
+            string soluong = txtSoLuong.Text;
+            string mahoadon = cboMaHoaDon.Text;
+            qlhd.suaChiTietHoaDon(machitiethoadon,mathucdon,soluong,mahoadon);
+            loadDatagridviewChiTietHoaDon(cboMaHoaDon.Text);
+            loadDatagridviewHoaDon();
         }
     }
 }

@@ -136,12 +136,12 @@ namespace BLL_DAL
                 MessageBox.Show("Mã bàn không tồn tại.");
                 return;
             }
-            if (hd!=null)
+            if (hd != null)
             {
                 hd.NgayTao = Convert.ToDateTime(ngaytao);
                 hd.MaBan = maban;
                 hd.MaNhanVien = manv;
-                if(makh.Length==0)
+                if (makh.Length == 0)
                 {
                     makh = null;
                 }
@@ -152,6 +152,97 @@ namespace BLL_DAL
 
                 MessageBox.Show("Sửa thành công.");
             }
+            else
+            {
+                MessageBox.Show("Mã hoá đơn cần sửa không tồn tại.");
+                return;
+            }
+        }
+        public void themChiTietHoaDon(string mahoadon,string mathucdon,string soluong)
+        {
+            if(kiemtraMaHoaDon(mahoadon))
+            {
+                MessageBox.Show("Mã hoá đơn không tồn tại.");
+                return;
+            }
+            
+            ChiTietHoaDon cthd = new ChiTietHoaDon();
+            cthd.MaHoaDon = mahoadon;
+            cthd.MaThucDon = mathucdon;
+            cthd.SoLuong = int.Parse(soluong);
+            ThucDon td = db.ThucDons.Where(a => a.MaThucDon == mathucdon).FirstOrDefault();
+            if(td==null)
+            {
+                MessageBox.Show("Mã thực đơn không tồn tại");
+                return;
+            }
+            double thanhtien = int.Parse(soluong) * double.Parse(td.Gia.ToString());
+            cthd.ThanhTien = thanhtien;
+            db.ChiTietHoaDons.InsertOnSubmit(cthd);
+
+            HoaDon hd = db.HoaDons.Where(a => a.MaHoaDon == mahoadon).FirstOrDefault();
+            hd.ThanhTien += thanhtien;
+
+            db.SubmitChanges();
+            MessageBox.Show("Thêm thành công.");
+
+        }
+
+        public IEnumerable<HoaDon> loadComboboxHoaDon()
+        {
+            var hds = from hd in db.HoaDons select hd;
+            return hds;
+        }
+
+        public IEnumerable<ChiTietHoaDon> loadDatagridviewChiTietHoaDonByCombobox(string mahd)
+        {
+            var cthd = from hd in db.ChiTietHoaDons where hd.MaHoaDon == mahd select hd;
+            return cthd;
+        }
+
+        public void xoaChiTietHoaDon(string machitiethoadon)
+        {
+            ChiTietHoaDon cthd = db.ChiTietHoaDons.Where(a => a.MaChiTietHoaDon.ToString() == machitiethoadon).FirstOrDefault();
+            if(cthd != null)
+            {
+                double thanhtien = double.Parse(cthd.ThanhTien.ToString());
+                string mahd = cthd.MaHoaDon;
+                db.ChiTietHoaDons.DeleteOnSubmit(cthd);
+
+                HoaDon hd = db.HoaDons.Where(a => a.MaHoaDon == mahd).FirstOrDefault();
+                hd.ThanhTien -= thanhtien;
+
+                db.SubmitChanges();
+                MessageBox.Show("Xoá thành công.");
+            }
+            return;
+        }
+
+        public void suaChiTietHoaDon(string machitiethoadon,string mathucdon,string soluong,string mahoadon )
+        {
+            ChiTietHoaDon cthd = db.ChiTietHoaDons.Where(a => a.MaChiTietHoaDon == int.Parse(machitiethoadon)).FirstOrDefault();
+            double giacu = double.Parse(cthd.ThanhTien.ToString());
+            if(cthd!=null)
+            {
+                cthd.MaThucDon = mathucdon;
+                ThucDon td = db.ThucDons.Where(a => a.MaThucDon == mathucdon).FirstOrDefault();
+                cthd.SoLuong = int.Parse(soluong);
+                cthd.ThanhTien = int.Parse(soluong) * td.Gia;
+                double giamoi = int.Parse(soluong) * double.Parse(td.Gia.ToString());
+
+                HoaDon hd = db.HoaDons.Where(a => a.MaHoaDon == mahoadon).FirstOrDefault();
+                hd.ThanhTien -= giacu;
+                hd.ThanhTien += giamoi;
+
+                db.SubmitChanges();
+                MessageBox.Show("Sửa thành công.");
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+                return;
+            }
+            
         }
     }
 }
