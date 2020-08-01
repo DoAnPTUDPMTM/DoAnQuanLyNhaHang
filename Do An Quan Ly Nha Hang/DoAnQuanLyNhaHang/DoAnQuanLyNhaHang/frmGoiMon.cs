@@ -13,6 +13,7 @@ namespace DoAnQuanLyNhaHang
     public partial class frmGoiMon : Form
     {
         public string manvdn;
+        ExcelExport excel = new ExcelExport();
         QuanLyBan ban = new QuanLyBan();
         QuanLyThucDon thucdon = new QuanLyThucDon();
         QuanLyGoiMon goimon = new QuanLyGoiMon();
@@ -269,11 +270,26 @@ namespace DoAnQuanLyNhaHang
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            goimon.thanhToan(cboBan.SelectedValue.ToString(),manvdn,double.Parse(txtTongTien.Text));
+            string maHD = "";
+            goimon.thanhToan(cboBan.SelectedValue.ToString(),manvdn,double.Parse(txtTongTien.Text),ref maHD);
+            if(MessageBox.Show("Bạn có muốn in hoá đơn không?","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                // lấy Hoá Đơn từ mã hoá đơn
+                HoaDon hd = goimon.layHoaDonTuMaHoaDon(maHD);
+                string name = string.Empty;
+                List<ChiTietHoaDon> lstChiTietHoaDon = goimon.layDSChiTietHoaDonTuMaHoaDon(maHD);
+                excel.ExportKhoa(lstChiTietHoaDon, hd, ref name, false);
+
+                System.Diagnostics.Process.Start(name);
+            }
+            
+
             loadBans();
             loadComboboxBanCanChuyen();
             loadComboboxBanTrong();
             showGoiMon(idBanDaChon);
+
+
         }
 
         private void loadComboboxBanCanChuyen()

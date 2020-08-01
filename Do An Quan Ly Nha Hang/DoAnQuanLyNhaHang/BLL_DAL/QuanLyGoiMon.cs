@@ -8,6 +8,7 @@ namespace BLL_DAL
 {
     public class QuanLyGoiMon
     {
+        
         QuanLyNhaHangDataContext db = new QuanLyNhaHangDataContext();
         public IEnumerable<Ban> getBans()
         {
@@ -128,7 +129,7 @@ namespace BLL_DAL
             db.ChiTietHoaDons.InsertOnSubmit(cthd);
 
         }
-        public void thanhToan(string maban, string manhanvien, double thanhtien)
+        public void thanhToan(string maban, string manhanvien, double thanhtien, ref string maHD)
         {
             string mahoadon;
             var hoadons = db.HoaDons.Count();
@@ -176,7 +177,7 @@ namespace BLL_DAL
             hd.MaBan = maban;
             hd.MaNhanVien = manhanvien;
             hd.ThanhTien = thanhtien;
-            
+            maHD = mahoadon;
             db.HoaDons.InsertOnSubmit(hd);
             // thêm chi tiết hoá đơn
             var goimon = from gm in db.GoiMons where gm.MaBan == maban select gm;
@@ -240,6 +241,37 @@ namespace BLL_DAL
         {
             var Td = from td in db.ThucDons where td.MaLoaiThucDon == maloai select td;
             return Td;
+        }
+
+        public HoaDon layHoaDonTuMaHoaDon(string mahd)
+        {
+            HoaDon hd = db.HoaDons.Where(a => a.MaHoaDon == mahd).FirstOrDefault();
+            if(hd!=null)
+            {
+                return hd;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<ChiTietHoaDon> layDSChiTietHoaDonTuMaHoaDon(string mahd)
+        {
+            List<ChiTietHoaDon> lstChiTietHoaDon = new List<ChiTietHoaDon>();
+            var dscthd = from ct in db.ChiTietHoaDons where ct.MaHoaDon == mahd select ct;
+            int stt = 1;
+            foreach(ChiTietHoaDon cthd in dscthd)
+            {
+                cthd.STT = stt.ToString();
+                
+                ThucDon td = db.ThucDons.Where(a => a.MaThucDon == cthd.MaThucDon).FirstOrDefault();
+                cthd.TenThucDon = td.TenThucDon;
+                cthd.DonGia = double.Parse(td.Gia.ToString());
+                lstChiTietHoaDon.Add(cthd);
+                stt++;
+            }
+            return lstChiTietHoaDon;
         }
     }
 }
