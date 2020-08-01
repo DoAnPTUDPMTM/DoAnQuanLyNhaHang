@@ -36,19 +36,6 @@
             this.manHinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.manHinhTableAdapter = new DoAnQuanLyNhaHang.DataSet1TableAdapters.ManHinhTableAdapter();
             this.tableAdapterManager = new DoAnQuanLyNhaHang.DataSet1TableAdapters.TableAdapterManager();
-            this.manHinhBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.manHinhBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.manHinhDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +44,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDong = new DevExpress.XtraEditors.SimpleButton();
             maManHinhLabel = new System.Windows.Forms.Label();
             tenManHinhLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manHinhBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manHinhBindingNavigator)).BeginInit();
-            this.manHinhBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manHinhDataGridView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -71,18 +60,18 @@
             // maManHinhLabel
             // 
             maManHinhLabel.AutoSize = true;
-            maManHinhLabel.Location = new System.Drawing.Point(438, 36);
+            maManHinhLabel.Location = new System.Drawing.Point(437, 55);
             maManHinhLabel.Name = "maManHinhLabel";
-            maManHinhLabel.Size = new System.Drawing.Size(95, 15);
+            maManHinhLabel.Size = new System.Drawing.Size(95, 17);
             maManHinhLabel.TabIndex = 2;
             maManHinhLabel.Text = "Mã Màn Hình:";
             // 
             // tenManHinhLabel
             // 
             tenManHinhLabel.AutoSize = true;
-            tenManHinhLabel.Location = new System.Drawing.Point(438, 51);
+            tenManHinhLabel.Location = new System.Drawing.Point(437, 78);
             tenManHinhLabel.Name = "tenManHinhLabel";
-            tenManHinhLabel.Size = new System.Drawing.Size(101, 15);
+            tenManHinhLabel.Size = new System.Drawing.Size(101, 17);
             tenManHinhLabel.TabIndex = 4;
             tenManHinhLabel.Text = "Tên Màn Hình:";
             // 
@@ -111,131 +100,6 @@
             this.tableAdapterManager.TaiKhoanTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAnQuanLyNhaHang.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // manHinhBindingNavigator
-            // 
-            this.manHinhBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.manHinhBindingNavigator.BindingSource = this.manHinhBindingSource;
-            this.manHinhBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.manHinhBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.manHinhBindingNavigator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.manHinhBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.manHinhBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.manHinhBindingNavigatorSaveItem});
-            this.manHinhBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.manHinhBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.manHinhBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.manHinhBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.manHinhBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.manHinhBindingNavigator.Name = "manHinhBindingNavigator";
-            this.manHinhBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.manHinhBindingNavigator.Size = new System.Drawing.Size(1094, 22);
-            this.manHinhBindingNavigator.TabIndex = 0;
-            this.manHinhBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(100, 19);
-            this.bindingNavigatorAddNewItem.Text = "Thêm Mới";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 19);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(59, 19);
-            this.bindingNavigatorDeleteItem.Text = "Xoá";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 19);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 19);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 22);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 22);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 19);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 19);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 22);
-            // 
-            // manHinhBindingNavigatorSaveItem
-            // 
-            this.manHinhBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("manHinhBindingNavigatorSaveItem.Image")));
-            this.manHinhBindingNavigatorSaveItem.Name = "manHinhBindingNavigatorSaveItem";
-            this.manHinhBindingNavigatorSaveItem.Size = new System.Drawing.Size(57, 19);
-            this.manHinhBindingNavigatorSaveItem.Text = "Lưu";
-            this.manHinhBindingNavigatorSaveItem.Click += new System.EventHandler(this.manHinhBindingNavigatorSaveItem_Click);
-            // 
             // manHinhDataGridView
             // 
             this.manHinhDataGridView.AutoGenerateColumns = false;
@@ -246,12 +110,14 @@
             this.dataGridViewTextBoxColumn2});
             this.manHinhDataGridView.DataSource = this.manHinhBindingSource;
             this.manHinhDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.manHinhDataGridView.Location = new System.Drawing.Point(3, 162);
+            this.manHinhDataGridView.Location = new System.Drawing.Point(3, 240);
             this.manHinhDataGridView.Name = "manHinhDataGridView";
+            this.manHinhDataGridView.ReadOnly = true;
             this.manHinhDataGridView.RowTemplate.Height = 24;
             this.manHinhDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.manHinhDataGridView.Size = new System.Drawing.Size(1088, 388);
+            this.manHinhDataGridView.Size = new System.Drawing.Size(1088, 578);
             this.manHinhDataGridView.TabIndex = 1;
+            this.manHinhDataGridView.SelectionChanged += new System.EventHandler(this.manHinhDataGridView_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -269,20 +135,20 @@
             // 
             this.maManHinhTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manHinhBindingSource, "MaManHinh", true));
             this.maManHinhTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maManHinhTextBox.Location = new System.Drawing.Point(546, 39);
+            this.maManHinhTextBox.Location = new System.Drawing.Point(545, 58);
             this.maManHinhTextBox.Multiline = true;
             this.maManHinhTextBox.Name = "maManHinhTextBox";
-            this.maManHinhTextBox.Size = new System.Drawing.Size(102, 9);
+            this.maManHinhTextBox.Size = new System.Drawing.Size(102, 17);
             this.maManHinhTextBox.TabIndex = 3;
             // 
             // tenManHinhTextBox
             // 
             this.tenManHinhTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manHinhBindingSource, "TenManHinh", true));
             this.tenManHinhTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tenManHinhTextBox.Location = new System.Drawing.Point(546, 54);
+            this.tenManHinhTextBox.Location = new System.Drawing.Point(545, 81);
             this.tenManHinhTextBox.Multiline = true;
             this.tenManHinhTextBox.Name = "tenManHinhTextBox";
-            this.tenManHinhTextBox.Size = new System.Drawing.Size(102, 9);
+            this.tenManHinhTextBox.Size = new System.Drawing.Size(102, 17);
             this.tenManHinhTextBox.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -291,39 +157,45 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.manHinhDataGridView, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.manHinhBindingNavigator, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0.9744214F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.917174F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1094, 553);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1094, 821);
             this.tableLayoutPanel1.TabIndex = 6;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel3.ColumnCount = 6;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel3.Controls.Add(this.tenManHinhTextBox, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(tenManHinhLabel, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.maManHinhTextBox, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(maManHinhLabel, 1, 1);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel3.Controls.Add(this.maManHinhTextBox, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(maManHinhLabel, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tenManHinhTextBox, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(tenManHinhLabel, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.btnThem, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.btnXoa, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.simpleButton1, 3, 3);
+            this.tableLayoutPanel3.Controls.Add(this.btnDong, 4, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 52);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 76);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1088, 104);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1088, 158);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // label1
@@ -332,27 +204,75 @@
             this.label1.BackColor = System.Drawing.Color.Gold;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("UTM Magnesium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 22);
+            this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1088, 27);
+            this.label1.Size = new System.Drawing.Size(1088, 65);
             this.label1.TabIndex = 2;
             this.label1.Text = "Màn Hình";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(437, 104);
+            this.btnXoa.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnXoa.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(102, 44);
+            this.btnXoa.TabIndex = 6;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnThem.Location = new System.Drawing.Point(329, 104);
+            this.btnThem.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnThem.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(102, 44);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(545, 104);
+            this.simpleButton1.LookAndFeel.SkinName = "DevExpress Style";
+            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(102, 44);
+            this.simpleButton1.TabIndex = 8;
+            this.simpleButton1.Text = "Sửa";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
+            // 
+            // btnDong
+            // 
+            this.btnDong.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image1")));
+            this.btnDong.Location = new System.Drawing.Point(653, 104);
+            this.btnDong.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnDong.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(102, 44);
+            this.btnDong.TabIndex = 9;
+            this.btnDong.Text = "Đóng";
             // 
             // frmManHinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 553);
+            this.ClientSize = new System.Drawing.Size(1094, 821);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmManHinh";
             this.Text = "frmManHinh";
             this.Load += new System.EventHandler(this.frmManHinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manHinhBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manHinhBindingNavigator)).EndInit();
-            this.manHinhBindingNavigator.ResumeLayout(false);
-            this.manHinhBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manHinhDataGridView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -368,19 +288,6 @@
         private System.Windows.Forms.BindingSource manHinhBindingSource;
         private DataSet1TableAdapters.ManHinhTableAdapter manHinhTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator manHinhBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton manHinhBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView manHinhDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -389,5 +296,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnDong;
     }
 }

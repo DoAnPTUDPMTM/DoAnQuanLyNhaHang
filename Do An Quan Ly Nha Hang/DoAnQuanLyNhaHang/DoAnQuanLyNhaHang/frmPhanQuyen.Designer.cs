@@ -42,7 +42,7 @@
             // 
             // txtMaNhomTaiKhoan
             // 
-            this.txtMaNhomTaiKhoan.Location = new System.Drawing.Point(290, 58);
+            this.txtMaNhomTaiKhoan.Location = new System.Drawing.Point(988, 114);
             this.txtMaNhomTaiKhoan.Name = "txtMaNhomTaiKhoan";
             this.txtMaNhomTaiKhoan.ReadOnly = true;
             this.txtMaNhomTaiKhoan.Size = new System.Drawing.Size(149, 22);
@@ -50,7 +50,7 @@
             // 
             // txtMaManHinh
             // 
-            this.txtMaManHinh.Location = new System.Drawing.Point(290, 114);
+            this.txtMaManHinh.Location = new System.Drawing.Point(988, 170);
             this.txtMaManHinh.Name = "txtMaManHinh";
             this.txtMaManHinh.ReadOnly = true;
             this.txtMaManHinh.Size = new System.Drawing.Size(149, 22);
@@ -59,7 +59,7 @@
             // chkbCoQuyen
             // 
             this.chkbCoQuyen.AutoSize = true;
-            this.chkbCoQuyen.Location = new System.Drawing.Point(342, 169);
+            this.chkbCoQuyen.Location = new System.Drawing.Point(1040, 225);
             this.chkbCoQuyen.Name = "chkbCoQuyen";
             this.chkbCoQuyen.Size = new System.Drawing.Size(18, 17);
             this.chkbCoQuyen.TabIndex = 2;
@@ -68,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(142, 61);
+            this.label1.Location = new System.Drawing.Point(840, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 17);
             this.label1.TabIndex = 3;
@@ -77,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(142, 117);
+            this.label2.Location = new System.Drawing.Point(840, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 17);
             this.label2.TabIndex = 4;
@@ -86,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(142, 169);
+            this.label3.Location = new System.Drawing.Point(840, 225);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 5;
@@ -97,19 +97,19 @@
             this.dtgvPhanQuyen2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvPhanQuyen2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvPhanQuyen2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvPhanQuyen2.Location = new System.Drawing.Point(0, 281);
+            this.dtgvPhanQuyen2.Location = new System.Drawing.Point(0, 309);
             this.dtgvPhanQuyen2.Name = "dtgvPhanQuyen2";
             this.dtgvPhanQuyen2.ReadOnly = true;
             this.dtgvPhanQuyen2.RowTemplate.Height = 24;
             this.dtgvPhanQuyen2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvPhanQuyen2.Size = new System.Drawing.Size(683, 222);
+            this.dtgvPhanQuyen2.Size = new System.Drawing.Size(1626, 479);
             this.dtgvPhanQuyen2.TabIndex = 6;
             this.dtgvPhanQuyen2.SelectionChanged += new System.EventHandler(this.dtgvPhanQuyen_SelectionChanged);
             // 
             // btnSua
             // 
-            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(300, 214);
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(998, 270);
             this.btnSua.LookAndFeel.SkinName = "DevExpress Style";
             this.btnSua.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnSua.Name = "btnSua";
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 503);
+            this.ClientSize = new System.Drawing.Size(1626, 788);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.dtgvPhanQuyen2);
             this.Controls.Add(this.label3);

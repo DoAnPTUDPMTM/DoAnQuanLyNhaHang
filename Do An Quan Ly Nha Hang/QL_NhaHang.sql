@@ -235,6 +235,7 @@ insert into PhanQuyen values ('QL','SF008',1)
 insert into PhanQuyen values ('QL','SF009',1)
 insert into PhanQuyen values ('QL','SF010',1)
 insert into PhanQuyen values ('QL','SF011',1)
+
 /* ---------- Bảng Gọi Món ----------- */
 CREATE TABLE GoiMon
 (

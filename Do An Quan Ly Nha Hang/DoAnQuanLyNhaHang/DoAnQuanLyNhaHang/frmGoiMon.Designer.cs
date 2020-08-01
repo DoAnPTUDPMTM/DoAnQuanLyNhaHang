@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGoiMon));
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgvMonAnDaGoi = new System.Windows.Forms.DataGridView();
             this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
@@ -36,8 +37,6 @@
             this.dtgvMenu = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnThemMon = new System.Windows.Forms.Button();
-            this.btnXoaMon = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
@@ -46,19 +45,20 @@
             this.cboTenThucDon = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.numSoLuong = new System.Windows.Forms.NumericUpDown();
-            this.btnThanhToan = new System.Windows.Forms.Button();
-            this.btnInHoaDon = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cboBan = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cboBanConTrong = new System.Windows.Forms.ComboBox();
             this.cboBanCanChuyen = new System.Windows.Forms.ComboBox();
-            this.btnChuyenBan = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboLoaiThucDon = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnXoaMon = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThanhToan = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChuyenBan = new DevExpress.XtraEditors.SimpleButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMonAnDaGoi)).BeginInit();
             this.flpBan.SuspendLayout();
@@ -152,26 +152,6 @@
             this.label2.Text = "Các món ăn đã gọi";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnThemMon
-            // 
-            this.btnThemMon.Location = new System.Drawing.Point(740, 484);
-            this.btnThemMon.Name = "btnThemMon";
-            this.btnThemMon.Size = new System.Drawing.Size(96, 31);
-            this.btnThemMon.TabIndex = 5;
-            this.btnThemMon.Text = "Thêm món";
-            this.btnThemMon.UseVisualStyleBackColor = true;
-            this.btnThemMon.Click += new System.EventHandler(this.btnThemMon_Click);
-            // 
-            // btnXoaMon
-            // 
-            this.btnXoaMon.Location = new System.Drawing.Point(911, 346);
-            this.btnXoaMon.Name = "btnXoaMon";
-            this.btnXoaMon.Size = new System.Drawing.Size(96, 31);
-            this.btnXoaMon.TabIndex = 6;
-            this.btnXoaMon.Text = "Xoá món";
-            this.btnXoaMon.UseVisualStyleBackColor = true;
-            this.btnXoaMon.Click += new System.EventHandler(this.btnXoaMon_Click);
-            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Gold;
@@ -246,25 +226,6 @@
             this.numSoLuong.Size = new System.Drawing.Size(67, 22);
             this.numSoLuong.TabIndex = 14;
             // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.Location = new System.Drawing.Point(888, 484);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(96, 31);
-            this.btnThanhToan.TabIndex = 15;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
-            // 
-            // btnInHoaDon
-            // 
-            this.btnInHoaDon.Location = new System.Drawing.Point(1029, 484);
-            this.btnInHoaDon.Name = "btnInHoaDon";
-            this.btnInHoaDon.Size = new System.Drawing.Size(96, 31);
-            this.btnInHoaDon.TabIndex = 16;
-            this.btnInHoaDon.Text = "In Hoá Đơn";
-            this.btnInHoaDon.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -289,7 +250,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(1418, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(431, 32);
+            this.label9.Size = new System.Drawing.Size(494, 32);
             this.label9.TabIndex = 19;
             this.label9.Text = "Chuyển bàn";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -297,7 +258,7 @@
             // cboBanConTrong
             // 
             this.cboBanConTrong.FormattingEnabled = true;
-            this.cboBanConTrong.Location = new System.Drawing.Point(289, 65);
+            this.cboBanConTrong.Location = new System.Drawing.Point(355, 65);
             this.cboBanConTrong.Name = "cboBanConTrong";
             this.cboBanConTrong.Size = new System.Drawing.Size(137, 24);
             this.cboBanConTrong.TabIndex = 20;
@@ -309,16 +270,6 @@
             this.cboBanCanChuyen.Name = "cboBanCanChuyen";
             this.cboBanCanChuyen.Size = new System.Drawing.Size(147, 24);
             this.cboBanCanChuyen.TabIndex = 21;
-            // 
-            // btnChuyenBan
-            // 
-            this.btnChuyenBan.Location = new System.Drawing.Point(181, 53);
-            this.btnChuyenBan.Name = "btnChuyenBan";
-            this.btnChuyenBan.Size = new System.Drawing.Size(78, 47);
-            this.btnChuyenBan.TabIndex = 22;
-            this.btnChuyenBan.Text = "Chuyển bàn";
-            this.btnChuyenBan.UseVisualStyleBackColor = true;
-            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
             // 
             // label10
             // 
@@ -332,7 +283,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(302, 32);
+            this.label11.Location = new System.Drawing.Point(366, 32);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(97, 17);
             this.label11.TabIndex = 24;
@@ -340,14 +291,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnChuyenBan);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.cboBanConTrong);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.cboBanCanChuyen);
-            this.groupBox1.Controls.Add(this.btnChuyenBan);
             this.groupBox1.Location = new System.Drawing.Point(1414, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(435, 119);
+            this.groupBox1.Size = new System.Drawing.Size(498, 119);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             // 
@@ -369,20 +320,69 @@
             this.label12.TabIndex = 26;
             this.label12.Text = "Loại:";
             // 
+            // btnXoaMon
+            // 
+            this.btnXoaMon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaMon.ImageOptions.Image")));
+            this.btnXoaMon.Location = new System.Drawing.Point(888, 341);
+            this.btnXoaMon.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnXoaMon.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnXoaMon.Name = "btnXoaMon";
+            this.btnXoaMon.Size = new System.Drawing.Size(128, 39);
+            this.btnXoaMon.TabIndex = 28;
+            this.btnXoaMon.Text = "Xoá món";
+            this.btnXoaMon.Click += new System.EventHandler(this.btnXoaMon_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(800, 479);
+            this.simpleButton1.LookAndFeel.SkinName = "DevExpress Style";
+            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(128, 45);
+            this.simpleButton1.TabIndex = 29;
+            this.simpleButton1.Text = "Thêm món";
+            this.simpleButton1.Click += new System.EventHandler(this.btnThemMon_Click);
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image1")));
+            this.btnThanhToan.Location = new System.Drawing.Point(979, 479);
+            this.btnThanhToan.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnThanhToan.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(135, 45);
+            this.btnThanhToan.TabIndex = 30;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
+            // btnChuyenBan
+            // 
+            this.btnChuyenBan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnChuyenBan.Location = new System.Drawing.Point(179, 37);
+            this.btnChuyenBan.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnChuyenBan.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnChuyenBan.Name = "btnChuyenBan";
+            this.btnChuyenBan.Size = new System.Drawing.Size(151, 52);
+            this.btnChuyenBan.TabIndex = 31;
+            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
+            // 
             // frmGoiMon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1861, 779);
+            this.ClientSize = new System.Drawing.Size(1924, 779);
+            this.Controls.Add(this.btnThanhToan);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnXoaMon);
             this.Controls.Add(this.cboLoaiThucDon);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cboBan);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnInHoaDon);
-            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.numSoLuong);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cboTenThucDon);
@@ -391,8 +391,6 @@
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnXoaMon);
-            this.Controls.Add(this.btnThemMon);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -422,8 +420,6 @@
         private System.Windows.Forms.DataGridView dtgvMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnThemMon;
-        private System.Windows.Forms.Button btnXoaMon;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -433,18 +429,19 @@
         private System.Windows.Forms.ComboBox cboTenThucDon;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numSoLuong;
-        private System.Windows.Forms.Button btnThanhToan;
-        private System.Windows.Forms.Button btnInHoaDon;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboBan;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboBanConTrong;
         private System.Windows.Forms.ComboBox cboBanCanChuyen;
-        private System.Windows.Forms.Button btnChuyenBan;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cboLoaiThucDon;
         private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.SimpleButton btnXoaMon;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThanhToan;
+        private DevExpress.XtraEditors.SimpleButton btnChuyenBan;
     }
 }
