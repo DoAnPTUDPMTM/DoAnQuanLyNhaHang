@@ -108,7 +108,7 @@ namespace DoAnQuanLyNhaHang
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-
+            txtTaiKhoan.Focus();
         }
     }
 }

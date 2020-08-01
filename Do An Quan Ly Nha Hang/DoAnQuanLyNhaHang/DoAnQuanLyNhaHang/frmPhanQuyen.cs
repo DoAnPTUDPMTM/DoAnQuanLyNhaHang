@@ -24,14 +24,14 @@ namespace DoAnQuanLyNhaHang
         }
         private void loadDatagridviewPhanQuyen()
         {
-            dtgvPhanQuyen.DataSource = pq.getPhanQuyens();
+            dtgvPhanQuyen2.DataSource = pq.getPhanQuyens();
         }
 
         private void dtgvPhanQuyen_SelectionChanged(object sender, EventArgs e)
         {
-            txtMaNhomTaiKhoan.Text = dtgvPhanQuyen.CurrentRow.Cells[0].Value.ToString();
-            txtMaManHinh.Text = dtgvPhanQuyen.CurrentRow.Cells[1].Value.ToString();
-            if (dtgvPhanQuyen.CurrentRow.Cells[2].Value.ToString() == "True")
+            txtMaNhomTaiKhoan.Text = dtgvPhanQuyen2.CurrentRow.Cells[0].Value.ToString();
+            txtMaManHinh.Text = dtgvPhanQuyen2.CurrentRow.Cells[1].Value.ToString();
+            if (dtgvPhanQuyen2.CurrentRow.Cells[2].Value.ToString() == "True")
             {
                 chkbCoQuyen.Checked = true;
             }

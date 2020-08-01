@@ -143,8 +143,29 @@ namespace BLL_DAL
                 //flag1 = hoadonss.MaHoaDon;
                 //string flag2;
                 //flag2 = flag1.Substring(2);
-                int sohoadon = db.HoaDons.Count() + 1;
+                string flag = "";
+                int sohoadon = 2;
                 mahoadon = "HD" + sohoadon;
+                do
+                {
+                    if (mahoadon == flag)
+                    {
+                        sohoadon++;
+                        mahoadon = "HD" + sohoadon;
+                    }
+
+                    HoaDon thd = db.HoaDons.Where(a => a.MaHoaDon == mahoadon).FirstOrDefault();
+                    if(thd == null)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        flag = thd.MaHoaDon;
+                    }
+                    
+                    
+                } while (mahoadon==flag);
 
             }
 

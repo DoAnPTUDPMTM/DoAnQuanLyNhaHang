@@ -23,6 +23,7 @@ namespace DoAnQuanLyNhaHang
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             loadDatagridviewHoaDon();
+
             //loadDatagridviewChiTietHoaDon();
         }
 
@@ -86,6 +87,45 @@ namespace DoAnQuanLyNhaHang
 
             // bên dtgvChiTietHoaDOn sẽ hiện lên
             loadDatagridviewChiTietHoaDon(dtgvHoaDon.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void btnThemHoaDon_Click(object sender, EventArgs e)
+        {
+            qlhd.themHoaDon(txtMaHoaDon.Text,txtMaBan.Text,txtMaNhanVien.Text,txtMaKhachHang.Text,txtTongTien.Text);
+            loadDatagridviewHoaDon();
+        }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void btnSuaHoaDon_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void btnHuyHoaDon_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnLuuHoaDon_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnXoaHoaDon_Click(object sender, EventArgs e)
+        {
+            string mahd = dtgvHoaDon.CurrentRow.Cells[0].Value.ToString();
+            qlhd.xoaHoaDon(mahd);
+            loadDatagridviewHoaDon();
+        }
+
+        private void dtgvChiTietHoaDon_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

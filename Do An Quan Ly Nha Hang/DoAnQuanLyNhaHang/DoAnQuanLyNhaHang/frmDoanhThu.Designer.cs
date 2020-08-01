@@ -30,10 +30,10 @@
         {
             this.dtpNgayDau = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayCuoi = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgvDoanhThu = new System.Windows.Forms.DataGridView();
+            this.btnThongKe = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,16 +52,6 @@
             this.dtpNgayCuoi.Name = "dtpNgayCuoi";
             this.dtpNgayCuoi.Size = new System.Drawing.Size(130, 22);
             this.dtpNgayCuoi.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(501, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 42);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Thống Kê";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -93,15 +83,26 @@
             this.dtgvDoanhThu.Size = new System.Drawing.Size(1157, 440);
             this.dtgvDoanhThu.TabIndex = 5;
             // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Location = new System.Drawing.Point(513, 29);
+            this.btnThongKe.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnThongKe.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(121, 41);
+            this.btnThongKe.TabIndex = 6;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 557);
+            this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.dtgvDoanhThu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpNgayCuoi);
             this.Controls.Add(this.dtpNgayDau);
             this.Name = "frmDoanhThu";
@@ -116,9 +117,9 @@
 
         private System.Windows.Forms.DateTimePicker dtpNgayDau;
         private System.Windows.Forms.DateTimePicker dtpNgayCuoi;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgvDoanhThu;
+        private DevExpress.XtraEditors.SimpleButton btnThongKe;
     }
 }

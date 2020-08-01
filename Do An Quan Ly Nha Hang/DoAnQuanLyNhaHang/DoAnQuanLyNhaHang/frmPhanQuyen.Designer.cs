@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhanQuyen));
             this.txtMaNhomTaiKhoan = new System.Windows.Forms.TextBox();
             this.txtMaManHinh = new System.Windows.Forms.TextBox();
             this.chkbCoQuyen = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtgvPhanQuyen = new System.Windows.Forms.DataGridView();
-            this.Sửa = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvPhanQuyen)).BeginInit();
+            this.dtgvPhanQuyen2 = new System.Windows.Forms.DataGridView();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPhanQuyen2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMaNhomTaiKhoan
@@ -91,36 +92,39 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Có quyền:";
             // 
-            // dtgvPhanQuyen
+            // dtgvPhanQuyen2
             // 
-            this.dtgvPhanQuyen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvPhanQuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvPhanQuyen.Location = new System.Drawing.Point(13, 291);
-            this.dtgvPhanQuyen.Name = "dtgvPhanQuyen";
-            this.dtgvPhanQuyen.ReadOnly = true;
-            this.dtgvPhanQuyen.RowTemplate.Height = 24;
-            this.dtgvPhanQuyen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvPhanQuyen.Size = new System.Drawing.Size(661, 200);
-            this.dtgvPhanQuyen.TabIndex = 6;
-            this.dtgvPhanQuyen.SelectionChanged += new System.EventHandler(this.dtgvPhanQuyen_SelectionChanged);
+            this.dtgvPhanQuyen2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvPhanQuyen2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvPhanQuyen2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgvPhanQuyen2.Location = new System.Drawing.Point(0, 281);
+            this.dtgvPhanQuyen2.Name = "dtgvPhanQuyen2";
+            this.dtgvPhanQuyen2.ReadOnly = true;
+            this.dtgvPhanQuyen2.RowTemplate.Height = 24;
+            this.dtgvPhanQuyen2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvPhanQuyen2.Size = new System.Drawing.Size(683, 222);
+            this.dtgvPhanQuyen2.TabIndex = 6;
+            this.dtgvPhanQuyen2.SelectionChanged += new System.EventHandler(this.dtgvPhanQuyen_SelectionChanged);
             // 
-            // Sửa
+            // btnSua
             // 
-            this.Sửa.Location = new System.Drawing.Point(285, 232);
-            this.Sửa.Name = "Sửa";
-            this.Sửa.Size = new System.Drawing.Size(75, 23);
-            this.Sửa.TabIndex = 10;
-            this.Sửa.Text = "Sửa";
-            this.Sửa.UseVisualStyleBackColor = true;
-            this.Sửa.Click += new System.EventHandler(this.Sửa_Click);
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(300, 214);
+            this.btnSua.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnSua.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(98, 29);
+            this.btnSua.TabIndex = 11;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.Sửa_Click);
             // 
             // frmPhanQuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 503);
-            this.Controls.Add(this.Sửa);
-            this.Controls.Add(this.dtgvPhanQuyen);
+            this.ClientSize = new System.Drawing.Size(683, 503);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.dtgvPhanQuyen2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -130,7 +134,7 @@
             this.Name = "frmPhanQuyen";
             this.Text = "frmPhanQuyen";
             this.Load += new System.EventHandler(this.frmPhanQuyen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvPhanQuyen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPhanQuyen2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,7 +148,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dtgvPhanQuyen;
-        private System.Windows.Forms.Button Sửa;
+        private System.Windows.Forms.DataGridView dtgvPhanQuyen2;
+        private DevExpress.XtraEditors.SimpleButton btnSua;
     }
 }

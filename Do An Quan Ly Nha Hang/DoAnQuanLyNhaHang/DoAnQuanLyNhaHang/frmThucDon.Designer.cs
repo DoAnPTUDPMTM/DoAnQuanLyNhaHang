@@ -56,7 +56,7 @@
             this.dtgvThucDon.Name = "dtgvThucDon";
             this.dtgvThucDon.RowTemplate.Height = 24;
             this.dtgvThucDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvThucDon.Size = new System.Drawing.Size(1015, 369);
+            this.dtgvThucDon.Size = new System.Drawing.Size(1019, 369);
             this.dtgvThucDon.TabIndex = 0;
             this.dtgvThucDon.SelectionChanged += new System.EventHandler(this.dtgvThucDon_SelectionChanged);
             // 
@@ -200,7 +200,7 @@
             this.label6.Font = new System.Drawing.Font("UTM Magnesium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1015, 69);
+            this.label6.Size = new System.Drawing.Size(1019, 69);
             this.label6.TabIndex = 12;
             this.label6.Text = "THỰC ĐƠN";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 693);
+            this.ClientSize = new System.Drawing.Size(1019, 693);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnSua);

@@ -32,6 +32,7 @@
             System.Windows.Forms.Label maBanLabel;
             System.Windows.Forms.Label tenBanLabel;
             System.Windows.Forms.Label trangThaiLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBan));
             this.dataSet1 = new DoAnQuanLyNhaHang.DataSet1();
             this.banBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.banTableAdapter = new DoAnQuanLyNhaHang.DataSet1TableAdapters.BanTableAdapter();
@@ -42,45 +43,46 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMaBan = new System.Windows.Forms.TextBox();
             this.txtTenBan = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
-            this.btnDong = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDong = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             maBanLabel = new System.Windows.Forms.Label();
             tenBanLabel = new System.Windows.Forms.Label();
             trangThaiLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBan)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // maBanLabel
             // 
             maBanLabel.AutoSize = true;
-            maBanLabel.Location = new System.Drawing.Point(28, 46);
+            maBanLabel.Location = new System.Drawing.Point(44, 53);
             maBanLabel.Name = "maBanLabel";
-            maBanLabel.Size = new System.Drawing.Size(60, 17);
+            maBanLabel.Size = new System.Drawing.Size(57, 17);
             maBanLabel.TabIndex = 2;
             maBanLabel.Text = "Mã Bàn:";
             // 
             // tenBanLabel
             // 
             tenBanLabel.AutoSize = true;
-            tenBanLabel.Location = new System.Drawing.Point(28, 74);
+            tenBanLabel.Location = new System.Drawing.Point(44, 92);
             tenBanLabel.Name = "tenBanLabel";
-            tenBanLabel.Size = new System.Drawing.Size(66, 17);
+            tenBanLabel.Size = new System.Drawing.Size(63, 17);
             tenBanLabel.TabIndex = 4;
             tenBanLabel.Text = "Tên Bàn:";
             // 
             // trangThaiLabel
             // 
             trangThaiLabel.AutoSize = true;
-            trangThaiLabel.Location = new System.Drawing.Point(28, 102);
+            trangThaiLabel.Location = new System.Drawing.Point(44, 126);
             trangThaiLabel.Name = "trangThaiLabel";
-            trangThaiLabel.Size = new System.Drawing.Size(82, 17);
+            trangThaiLabel.Size = new System.Drawing.Size(78, 17);
             trangThaiLabel.TabIndex = 6;
             trangThaiLabel.Text = "Trạng Thái:";
             // 
@@ -120,11 +122,11 @@
             this.dataGridViewTextBoxColumn3});
             this.dtgvBan.DataSource = this.banBindingSource;
             this.dtgvBan.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvBan.Location = new System.Drawing.Point(0, 337);
+            this.dtgvBan.Location = new System.Drawing.Point(0, 540);
             this.dtgvBan.Name = "dtgvBan";
             this.dtgvBan.RowTemplate.Height = 24;
             this.dtgvBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvBan.Size = new System.Drawing.Size(1056, 293);
+            this.dtgvBan.Size = new System.Drawing.Size(1337, 293);
             this.dtgvBan.TabIndex = 1;
             this.dtgvBan.SelectionChanged += new System.EventHandler(this.dtgvBan_SelectionChanged);
             // 
@@ -149,104 +151,101 @@
             // txtMaBan
             // 
             this.txtMaBan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.banBindingSource, "MaBan", true));
-            this.txtMaBan.Location = new System.Drawing.Point(116, 43);
+            this.txtMaBan.Location = new System.Drawing.Point(149, 47);
             this.txtMaBan.Name = "txtMaBan";
-            this.txtMaBan.Size = new System.Drawing.Size(166, 22);
-            this.txtMaBan.TabIndex = 3;
+            this.txtMaBan.Size = new System.Drawing.Size(166, 23);
+            this.txtMaBan.TabIndex = 1;
             // 
             // txtTenBan
             // 
             this.txtTenBan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.banBindingSource, "TenBan", true));
-            this.txtTenBan.Location = new System.Drawing.Point(116, 71);
+            this.txtTenBan.Location = new System.Drawing.Point(149, 86);
             this.txtTenBan.Name = "txtTenBan";
-            this.txtTenBan.Size = new System.Drawing.Size(166, 22);
-            this.txtTenBan.TabIndex = 5;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbTrangThai);
-            this.groupBox1.Controls.Add(this.txtMaBan);
-            this.groupBox1.Controls.Add(maBanLabel);
-            this.groupBox1.Controls.Add(trangThaiLabel);
-            this.groupBox1.Controls.Add(tenBanLabel);
-            this.groupBox1.Controls.Add(this.txtTenBan);
-            this.groupBox1.Location = new System.Drawing.Point(392, 70);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(310, 154);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Bàn";
+            this.txtTenBan.Size = new System.Drawing.Size(166, 23);
+            this.txtTenBan.TabIndex = 2;
             // 
             // cbTrangThai
             // 
             this.cbTrangThai.FormattingEnabled = true;
-            this.cbTrangThai.Location = new System.Drawing.Point(116, 102);
+            this.cbTrangThai.Location = new System.Drawing.Point(149, 119);
             this.cbTrangThai.Name = "cbTrangThai";
             this.cbTrangThai.Size = new System.Drawing.Size(166, 24);
-            this.cbTrangThai.TabIndex = 7;
-            // 
-            // btnDong
-            // 
-            this.btnDong.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_cancel_40;
-            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDong.Location = new System.Drawing.Point(709, 253);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(98, 38);
-            this.btnDong.TabIndex = 12;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_update_40;
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(576, 253);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(98, 38);
-            this.btnSua.TabIndex = 11;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_delete_40;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(434, 253);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(98, 38);
-            this.btnXoa.TabIndex = 10;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.cbTrangThai.TabIndex = 3;
             // 
             // btnThem
             // 
-            this.btnThem.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_add_new_40;
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(288, 253);
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThem.Location = new System.Drawing.Point(692, 393);
+            this.btnThem.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnThem.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 38);
-            this.btnThem.TabIndex = 9;
+            this.btnThem.Size = new System.Drawing.Size(102, 42);
+            this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(841, 393);
+            this.btnXoa.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnXoa.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(102, 42);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(990, 393);
+            this.btnSua.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnSua.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(102, 42);
+            this.btnSua.TabIndex = 6;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnDong
+            // 
+            this.btnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.Image")));
+            this.btnDong.Location = new System.Drawing.Point(1132, 393);
+            this.btnDong.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnDong.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(102, 42);
+            this.btnDong.TabIndex = 7;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.cbTrangThai);
+            this.groupControl1.Controls.Add(this.txtMaBan);
+            this.groupControl1.Controls.Add(trangThaiLabel);
+            this.groupControl1.Controls.Add(maBanLabel);
+            this.groupControl1.Controls.Add(this.txtTenBan);
+            this.groupControl1.Controls.Add(tenBanLabel);
+            this.groupControl1.Location = new System.Drawing.Point(784, 191);
+            this.groupControl1.LookAndFeel.SkinName = "DevExpress Style";
+            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(363, 167);
+            this.groupControl1.TabIndex = 9;
+            this.groupControl1.Text = "Thông Tin Bàn";
             // 
             // frmBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 630);
+            this.ClientSize = new System.Drawing.Size(1337, 833);
+            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtgvBan);
             this.Name = "frmBan";
             this.Text = "frmBan";
@@ -254,8 +253,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.banBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBan)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -272,11 +272,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.TextBox txtMaBan;
         private System.Windows.Forms.TextBox txtTenBan;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.ComboBox cbTrangThai;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
+        private DevExpress.XtraEditors.SimpleButton btnSua;
+        private DevExpress.XtraEditors.SimpleButton btnDong;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
     }
 }
