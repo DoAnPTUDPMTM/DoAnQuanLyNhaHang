@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtMaThucDon = new System.Windows.Forms.TextBox();
@@ -41,6 +41,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dtgvChiTietHoaDon = new System.Windows.Forms.DataGridView();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.cboMaHoaDon = new System.Windows.Forms.ComboBox();
             this.btnThemChiTietHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoaChiTietHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.btnSuaChiTietHoaDon = new DevExpress.XtraEditors.SimpleButton();
@@ -63,13 +64,17 @@
             this.txtMaHoaDon = new System.Windows.Forms.TextBox();
             this.txtMaKhachHang = new System.Windows.Forms.TextBox();
             this.txtMaBan = new System.Windows.Forms.TextBox();
-            this.cboMaHoaDon = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHoaDon)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtThanhTien
@@ -152,12 +157,12 @@
             this.dtgvChiTietHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvChiTietHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvChiTietHoaDon.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvChiTietHoaDon.Location = new System.Drawing.Point(2, 374);
+            this.dtgvChiTietHoaDon.Location = new System.Drawing.Point(2, 324);
             this.dtgvChiTietHoaDon.Name = "dtgvChiTietHoaDon";
             this.dtgvChiTietHoaDon.ReadOnly = true;
             this.dtgvChiTietHoaDon.RowTemplate.Height = 24;
             this.dtgvChiTietHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvChiTietHoaDon.Size = new System.Drawing.Size(940, 432);
+            this.dtgvChiTietHoaDon.Size = new System.Drawing.Size(949, 470);
             this.dtgvChiTietHoaDon.TabIndex = 0;
             this.dtgvChiTietHoaDon.SelectionChanged += new System.EventHandler(this.dtgvChiTietHoaDon_SelectionChanged);
             // 
@@ -179,15 +184,25 @@
             this.groupControl2.Controls.Add(this.label10);
             this.groupControl2.Controls.Add(this.txtMaThucDon);
             this.groupControl2.Controls.Add(this.label11);
-            this.groupControl2.Location = new System.Drawing.Point(968, 75);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(962, 3);
             this.groupControl2.LookAndFeel.SkinMaskColor = System.Drawing.Color.DarkSeaGreen;
             this.groupControl2.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.Transparent;
             this.groupControl2.LookAndFeel.SkinName = "DevExpress Style";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(944, 808);
+            this.groupControl2.Size = new System.Drawing.Size(953, 796);
             this.groupControl2.TabIndex = 23;
             this.groupControl2.Text = "Chi Tiết Hoá Đơn";
+            // 
+            // cboMaHoaDon
+            // 
+            this.cboMaHoaDon.FormattingEnabled = true;
+            this.cboMaHoaDon.Location = new System.Drawing.Point(272, 133);
+            this.cboMaHoaDon.Name = "cboMaHoaDon";
+            this.cboMaHoaDon.Size = new System.Drawing.Size(188, 24);
+            this.cboMaHoaDon.TabIndex = 24;
+            this.cboMaHoaDon.SelectedIndexChanged += new System.EventHandler(this.cboMaHoaDon_SelectedIndexChanged);
             // 
             // btnThemChiTietHoaDon
             // 
@@ -257,13 +272,14 @@
             this.groupControl1.Controls.Add(this.txtMaHoaDon);
             this.groupControl1.Controls.Add(this.txtMaKhachHang);
             this.groupControl1.Controls.Add(this.txtMaBan);
-            this.groupControl1.Location = new System.Drawing.Point(12, 75);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.LookAndFeel.SkinMaskColor = System.Drawing.Color.DarkSeaGreen;
             this.groupControl1.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.Transparent;
             this.groupControl1.LookAndFeel.SkinName = "DevExpress Style";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(939, 810);
+            this.groupControl1.Size = new System.Drawing.Size(953, 796);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Hoá Đơn";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -272,21 +288,21 @@
             // 
             this.dtgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvHoaDon.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvHoaDon.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvHoaDon.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvHoaDon.Location = new System.Drawing.Point(2, 374);
+            this.dtgvHoaDon.Location = new System.Drawing.Point(2, 324);
             this.dtgvHoaDon.Name = "dtgvHoaDon";
             this.dtgvHoaDon.ReadOnly = true;
             this.dtgvHoaDon.RowTemplate.Height = 24;
             this.dtgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvHoaDon.Size = new System.Drawing.Size(935, 434);
+            this.dtgvHoaDon.Size = new System.Drawing.Size(949, 470);
             this.dtgvHoaDon.TabIndex = 0;
             this.dtgvHoaDon.SelectionChanged += new System.EventHandler(this.dtgvHoaDon_SelectionChanged);
             // 
@@ -436,22 +452,55 @@
             this.txtMaBan.Size = new System.Drawing.Size(188, 23);
             this.txtMaBan.TabIndex = 8;
             // 
-            // cboMaHoaDon
+            // tableLayoutPanel1
             // 
-            this.cboMaHoaDon.FormattingEnabled = true;
-            this.cboMaHoaDon.Location = new System.Drawing.Point(272, 133);
-            this.cboMaHoaDon.Name = "cboMaHoaDon";
-            this.cboMaHoaDon.Size = new System.Drawing.Size(188, 24);
-            this.cboMaHoaDon.TabIndex = 24;
-            this.cboMaHoaDon.SelectedIndexChanged += new System.EventHandler(this.cboMaHoaDon_SelectedIndexChanged);
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1924, 897);
+            this.tableLayoutPanel1.TabIndex = 24;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.groupControl1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupControl2, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 92);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1918, 802);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Gold;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("UTM Magnesium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(1918, 89);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Quản Lý Hoá Đơn";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 897);
-            this.Controls.Add(this.groupControl2);
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmHoaDon";
             this.Text = "frmHoaDon";
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
@@ -463,6 +512,9 @@
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHoaDon)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -503,5 +555,8 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.ComboBox cboMaHoaDon;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label12;
     }
 }
