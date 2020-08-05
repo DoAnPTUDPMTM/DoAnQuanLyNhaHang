@@ -14,6 +14,7 @@ namespace DoAnQuanLyNhaHang
     public partial class frmDoanhThu : Form
     {
         QuanLyDoanhThu dt = new QuanLyDoanhThu();
+        ExcelExport excel = new ExcelExport();
         public frmDoanhThu()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace DoAnQuanLyNhaHang
             dtDoanhThu.Columns.Add("Mã NV");
             dtDoanhThu.Columns.Add("Mã KH");
             dtDoanhThu.Columns.Add("Tổng Tiền");
-            foreach(HoaDon hd in dt.getDoanhThu(dtpNgayDau.Value, dtpNgayCuoi.Value))
+            foreach (HoaDon hd in dt.getDoanhThu(dtpNgayDau.Value, dtpNgayCuoi.Value))
             {
                 DataRow newRow = dtDoanhThu.NewRow();
                 newRow["Mã HĐ"] = hd.MaHoaDon;
@@ -54,6 +55,20 @@ namespace DoAnQuanLyNhaHang
         private void button1_Click(object sender, EventArgs e)
         {
             loadDatagridviewDoanhThu();
+        }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+
+            List<HoaDon> lstHoaDon = dt.layHoaDon(dtpNgayDau.Value, dtpNgayCuoi.Value);
+            
+
+            string ngaybatdau = dtpNgayDau.Value.ToString();
+            string ngayketthuc = dtpNgayCuoi.Value.ToString();
+            string tennhanvien="";
+            string name = string.Empty;
+            excel.ExportDoanhThu(lstHoaDon,ngaybatdau,ngayketthuc,tennhanvien,ref name,false);
+            System.Diagnostics.Process.Start(name);
         }
     }
 }

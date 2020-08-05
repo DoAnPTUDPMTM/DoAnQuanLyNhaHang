@@ -69,18 +69,26 @@ namespace DoAnQuanLyNhaHang
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string mathucdon = dtgvThucDon.CurrentRow.Cells[0].Value.ToString();
-            string tenthucdon = dtgvThucDon.CurrentRow.Cells[2].Value.ToString();
-            bool flag = qltd.xoaThucDon(mathucdon);
-            if (flag)
+            if(MessageBox.Show("Bạn có chắc chắn muốn xoá thực đơn '"+txtTenThucDon.Text+"'?","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                MessageBox.Show("Đã xoá '" + tenthucdon + "' thành công");
+                string mathucdon = dtgvThucDon.CurrentRow.Cells[0].Value.ToString();
+                string tenthucdon = dtgvThucDon.CurrentRow.Cells[2].Value.ToString();
+                bool flag = qltd.xoaThucDon(mathucdon);
+                if (flag)
+                {
+                    MessageBox.Show("Đã xoá '" + tenthucdon + "' thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Không xoá được '" + tenthucdon + "'");
+                }
+                loadDatagridviewThucDon();
             }
             else
             {
-                MessageBox.Show("Không xoá được '" + tenthucdon + "'");
+                return;
             }
-            loadDatagridviewThucDon();
+            
         }
 
         private void dtgvThucDon_SelectionChanged(object sender, EventArgs e)
@@ -95,6 +103,13 @@ namespace DoAnQuanLyNhaHang
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string maloaithucdon = cboLoaiThucDon.SelectedValue.ToString();
+            qltd.suaThucDon(txtMaThucDon.Text, maloaithucdon, txtTenThucDon.Text, float.Parse(txtGiaThucDon.Text), cboTrangThaiThucDon.Text);
+            loadDatagridviewThucDon();
         }
     }
 }

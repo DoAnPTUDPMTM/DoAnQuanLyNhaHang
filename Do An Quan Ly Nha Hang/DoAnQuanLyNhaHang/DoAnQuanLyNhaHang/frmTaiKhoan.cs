@@ -91,6 +91,10 @@ namespace DoAnQuanLyNhaHang
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
             string tendangnhap = dtgvTaiKhoan.CurrentRow.Cells[0].Value.ToString();
             bool flag = qltk.xoaTaiKhoan(tendangnhap);
             if (flag)

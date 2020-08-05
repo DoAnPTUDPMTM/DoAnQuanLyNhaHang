@@ -76,5 +76,25 @@ namespace BLL_DAL
             }
         }
 
+        public void suaThucDon(string mathucdon,string maloai, string tenthucdon, float gia, string trangthai)
+        {
+            ThucDon td = qlnh.ThucDons.Where(a => a.MaThucDon == mathucdon).FirstOrDefault();
+            if(!kiemtraThucDon(mathucdon))
+            {
+                MessageBox.Show("Mã thực đơn không tồn tại.");
+                return;
+            }
+            if(td!=null)
+            {
+                td.TenThucDon = tenthucdon;
+                td.MaLoaiThucDon = maloai;
+                td.Gia = gia;
+                td.TrangThai = trangthai;
+
+                qlnh.SubmitChanges();
+            }
+            MessageBox.Show("Sửa thành công món '"+mathucdon+"'");
+        }
+
     }
 }

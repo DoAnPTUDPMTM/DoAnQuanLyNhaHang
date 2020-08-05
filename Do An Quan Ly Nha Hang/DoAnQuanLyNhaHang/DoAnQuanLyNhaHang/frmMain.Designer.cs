@@ -178,6 +178,7 @@
             this.btnQuanLyNhaCungCap.Size = new System.Drawing.Size(235, 26);
             this.btnQuanLyNhaCungCap.Tag = "SF012";
             this.btnQuanLyNhaCungCap.Text = "Quản Lý Nhà Cung Cấp";
+            this.btnQuanLyNhaCungCap.Click += new System.EventHandler(this.btnQuanLyNhaCungCap_Click);
             // 
             // quảnLýPhiếuNhậpToolStripMenuItem
             // 

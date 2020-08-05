@@ -47,7 +47,7 @@
             // dtpNgayDau
             // 
             this.dtpNgayDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayDau.Location = new System.Drawing.Point(469, 19);
+            this.dtpNgayDau.Location = new System.Drawing.Point(469, 29);
             this.dtpNgayDau.Name = "dtpNgayDau";
             this.dtpNgayDau.Size = new System.Drawing.Size(130, 22);
             this.dtpNgayDau.TabIndex = 0;
@@ -55,7 +55,7 @@
             // dtpNgayCuoi
             // 
             this.dtpNgayCuoi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayCuoi.Location = new System.Drawing.Point(1011, 19);
+            this.dtpNgayCuoi.Location = new System.Drawing.Point(1011, 29);
             this.dtpNgayCuoi.Name = "dtpNgayCuoi";
             this.dtpNgayCuoi.Size = new System.Drawing.Size(130, 22);
             this.dtpNgayCuoi.TabIndex = 1;
@@ -63,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(392, 16);
+            this.label1.Location = new System.Drawing.Point(392, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 3;
@@ -73,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(934, 16);
+            this.label2.Location = new System.Drawing.Point(934, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 34);
             this.label2.TabIndex = 4;
@@ -84,18 +84,18 @@
             this.dtgvDoanhThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvDoanhThu.Location = new System.Drawing.Point(3, 225);
+            this.dtgvDoanhThu.Location = new System.Drawing.Point(3, 169);
             this.dtgvDoanhThu.Name = "dtgvDoanhThu";
             this.dtgvDoanhThu.ReadOnly = true;
             this.dtgvDoanhThu.RowTemplate.Height = 24;
             this.dtgvDoanhThu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvDoanhThu.Size = new System.Drawing.Size(1558, 329);
+            this.dtgvDoanhThu.Size = new System.Drawing.Size(1558, 385);
             this.dtgvDoanhThu.TabIndex = 5;
             // 
             // btnThongKe
             // 
             this.btnThongKe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.ImageOptions.Image")));
-            this.btnThongKe.Location = new System.Drawing.Point(624, 19);
+            this.btnThongKe.Location = new System.Drawing.Point(624, 29);
             this.btnThongKe.LookAndFeel.SkinName = "DevExpress Style";
             this.btnThongKe.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnThongKe.Name = "btnThongKe";
@@ -116,8 +116,8 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1564, 557);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
@@ -155,22 +155,23 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 58);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1558, 161);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1558, 105);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // btnInHoaDon
             // 
             this.btnInHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.ImageOptions.Image")));
-            this.btnInHoaDon.Location = new System.Drawing.Point(779, 19);
+            this.btnInHoaDon.Location = new System.Drawing.Point(779, 29);
             this.btnInHoaDon.LookAndFeel.SkinName = "DevExpress Style";
             this.btnInHoaDon.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.Size = new System.Drawing.Size(149, 41);
             this.btnInHoaDon.TabIndex = 7;
             this.btnInHoaDon.Text = "In Hoá Đơn";
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // frmDoanhThu
             // 

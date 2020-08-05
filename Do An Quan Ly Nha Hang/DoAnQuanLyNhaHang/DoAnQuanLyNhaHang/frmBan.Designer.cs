@@ -44,15 +44,15 @@
             this.txtMaBan = new System.Windows.Forms.TextBox();
             this.txtTenBan = new System.Windows.Forms.TextBox();
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDong = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDong = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             maBanLabel = new System.Windows.Forms.Label();
             tenBanLabel = new System.Windows.Forms.Label();
             trangThaiLabel = new System.Windows.Forms.Label();
@@ -197,54 +197,6 @@
             this.cbTrangThai.Size = new System.Drawing.Size(166, 24);
             this.cbTrangThai.TabIndex = 3;
             // 
-            // btnThem
-            // 
-            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(455, 6);
-            this.btnThem.LookAndFeel.SkinName = "DevExpress Style";
-            this.btnThem.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(114, 42);
-            this.btnThem.TabIndex = 4;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(561, 6);
-            this.btnXoa.LookAndFeel.SkinName = "DevExpress Style";
-            this.btnXoa.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(106, 42);
-            this.btnXoa.TabIndex = 5;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(667, 6);
-            this.btnSua.LookAndFeel.SkinName = "DevExpress Style";
-            this.btnSua.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(116, 42);
-            this.btnSua.TabIndex = 6;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnDong
-            // 
-            this.btnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.Image")));
-            this.btnDong.Location = new System.Drawing.Point(773, 6);
-            this.btnDong.LookAndFeel.SkinName = "DevExpress Style";
-            this.btnDong.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(109, 42);
-            this.btnDong.TabIndex = 7;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
-            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.cbTrangThai);
@@ -334,6 +286,54 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1331, 77);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // btnThem
+            // 
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThem.Location = new System.Drawing.Point(468, 6);
+            this.btnThem.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnThem.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 42);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnDong
+            // 
+            this.btnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.Image")));
+            this.btnDong.Location = new System.Drawing.Point(786, 6);
+            this.btnDong.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnDong.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(100, 42);
+            this.btnDong.TabIndex = 7;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(574, 6);
+            this.btnXoa.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnXoa.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(100, 42);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(680, 6);
+            this.btnSua.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnSua.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(100, 42);
+            this.btnSua.TabIndex = 6;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // frmBan
             // 

@@ -231,5 +231,17 @@ namespace DoAnQuanLyNhaHang
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void btnQuanLyNhaCungCap_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmNhaCungCap();
+            if (Application.OpenForms.OfType<frmNhaCungCap>().Any())
+            {
+                Application.OpenForms.OfType<frmNhaCungCap>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

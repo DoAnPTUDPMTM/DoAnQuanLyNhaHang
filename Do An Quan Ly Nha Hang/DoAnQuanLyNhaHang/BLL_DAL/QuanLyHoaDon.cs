@@ -202,6 +202,10 @@ namespace BLL_DAL
 
         public void xoaChiTietHoaDon(string machitiethoadon)
         {
+            if(MessageBox.Show("Bạn có chắc chắn muốn xoá?","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2) == DialogResult.No)
+            {
+                return;
+            }
             ChiTietHoaDon cthd = db.ChiTietHoaDons.Where(a => a.MaChiTietHoaDon.ToString() == machitiethoadon).FirstOrDefault();
             if(cthd != null)
             {

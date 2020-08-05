@@ -35,22 +35,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaiKhoan));
             this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new DoAnQuanLyNhaHang.DataSet1();
             this.taiKhoanTableAdapter = new DoAnQuanLyNhaHang.DataSet1TableAdapters.TaiKhoanTableAdapter();
             this.tableAdapterManager = new DoAnQuanLyNhaHang.DataSet1TableAdapters.TableAdapterManager();
             this.dtgvTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnDong = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbHoatDong = new System.Windows.Forms.CheckBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.btnThem = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDong = new DevExpress.XtraEditors.SimpleButton();
             tenDangNhapLabel = new System.Windows.Forms.Label();
             matKhauLabel = new System.Windows.Forms.Label();
             hoatDongLabel = new System.Windows.Forms.Label();
@@ -152,36 +153,6 @@
             this.dtgvTaiKhoan.TabIndex = 4;
             this.dtgvTaiKhoan.SelectionChanged += new System.EventHandler(this.dtgvTaiKhoan_SelectionChanged);
             // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(479, 3);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(94, 34);
-            this.btnXoa.TabIndex = 6;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(598, 3);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(94, 34);
-            this.btnSua.TabIndex = 7;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnDong
-            // 
-            this.btnDong.Location = new System.Drawing.Point(717, 3);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(94, 34);
-            this.btnDong.TabIndex = 8;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Gold;
@@ -218,16 +189,6 @@
             this.txtMatKhau.Size = new System.Drawing.Size(126, 22);
             this.txtMatKhau.TabIndex = 12;
             // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(360, 3);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(94, 34);
-            this.btnThem.TabIndex = 5;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -256,10 +217,10 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.btnDong, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnSua, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnXoa, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnThem, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnXoa, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnSua, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnDong, 4, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 159);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -292,6 +253,54 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1192, 98);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // btnThem
+            // 
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThem.Location = new System.Drawing.Point(360, 3);
+            this.btnThem.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnThem.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(105, 34);
+            this.btnThem.TabIndex = 9;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(479, 3);
+            this.btnXoa.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnXoa.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(105, 34);
+            this.btnXoa.TabIndex = 10;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image1")));
+            this.btnSua.Location = new System.Drawing.Point(598, 3);
+            this.btnSua.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnSua.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(105, 34);
+            this.btnSua.TabIndex = 11;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnDong
+            // 
+            this.btnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image2")));
+            this.btnDong.Location = new System.Drawing.Point(717, 3);
+            this.btnDong.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnDong.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(105, 34);
+            this.btnDong.TabIndex = 12;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
             // frmTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -320,16 +329,16 @@
         private DataSet1TableAdapters.TaiKhoanTableAdapter taiKhoanTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView dtgvTaiKhoan;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox cbHoatDong;
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
+        private DevExpress.XtraEditors.SimpleButton btnSua;
+        private DevExpress.XtraEditors.SimpleButton btnDong;
     }
 }

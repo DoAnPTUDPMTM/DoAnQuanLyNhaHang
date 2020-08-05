@@ -16,5 +16,22 @@ namespace BLL_DAL
             
             return hoadons;
         }
+
+        public List<HoaDon> layHoaDon(DateTime ngaydau, DateTime ngaycuoi)
+        {
+            List<HoaDon> lstHD = new List<HoaDon>();
+            var hoadons = from hd in db.HoaDons where hd.NgayTao >= ngaydau && hd.NgayTao <= ngaycuoi select hd;
+            int stt = 1;
+            foreach(HoaDon hd in hoadons)
+            {
+                hd.STT = stt.ToString();
+                hd.MaKhachHang = "";
+                lstHD.Add(hd);
+                stt++;
+            }
+
+            return lstHD;
+
+        }
     }
 }

@@ -158,3 +158,4 @@ C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuan
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\bin\Debug\ja\DevExpress.Office.v19.2.Core.resources.dll
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.csproj.ResolveComReference.cache
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.frmNhaCungCap.resources

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Office.Interop.Outlook;
+//using Microsoft.Office.Interop.Outlook;
 using BLL_DAL;
 
 namespace DoAnQuanLyNhaHang
@@ -575,8 +575,16 @@ namespace DoAnQuanLyNhaHang
 
 
             // End template
-            markProcessor.ApplyMarkers(UnknownVariableAction.ReplaceBlank);
+            //try
+            //{
+                markProcessor.ApplyMarkers(UnknownVariableAction.ReplaceBlank);
 
+            //}
+            //catch (Exception ex)
+            //{
+
+            //}
+            
             // Delete temporary row
             IRange range = workSheet.FindFirst(TMP_ROW, ExcelFindType.Text);
 
@@ -887,7 +895,11 @@ namespace DoAnQuanLyNhaHang
 
                     arrByte = File.ReadAllBytes("HoaDon.xlsx").ToArray();
                     break;
-                #endregion
+                case "ThongKeDoanhThu":
+
+                    arrByte = File.ReadAllBytes("ThongKeDoanhThu.xlsx").ToArray();
+                    break;
+                    #endregion
             }
             // Get stream
             if (arrByte.Count() > 0)
@@ -1009,10 +1021,47 @@ namespace DoAnQuanLyNhaHang
 
             return OutSimpleReport(dataSource, replacer, "HoaDon", isPrintPreview, ref fileName);
         }
+        public void ThanhPhanB1_DoanhThu(ref Dictionary<string, string> replacer,string ngaybatdau,string ngayketthuc,string ngaylap,double tongtien,string nguoilap,string sotienbangchu)
+        {
+            if (replacer != null)
+            {
 
-     
+                replacer.Add("%NgayBD", ngaybatdau);
+                replacer.Add("%NgayKT", ngayketthuc);
+                replacer.Add("%Tong", tongtien.ToString());
+                replacer.Add("%SoTienBangChu", sotienbangchu);
+                replacer.Add("%NgayTK", ngaylap);
+                replacer.Add("%NguoiLapHoaDon", nguoilap);
+
+            }
+        }
+        public bool ExportDoanhThu(List<HoaDon> dataSource,string ngaybatdau,string ngayketthuc,string tennhanvien, ref string fileName, bool isPrintPreview)
+        {
+            // Check if data is null
+            if (dataSource == null || (dataSource != null && dataSource.Count == 0))
+            {
+                return false;
+            }
+
+            /// B1
+            double tongtien = 0;
+            foreach(HoaDon hd in dataSource)
+            {
+                tongtien += double.Parse(hd.ThanhTien.ToString());
+            }
+            string sotienbangchu = dstc.So_chu(double.Parse(tongtien.ToString()));
+            string ngaylap = "" + DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
+
+            // Create replacer
+            Dictionary<string, string> replacer = new Dictionary<string, string>();
+
+            ThanhPhanB1_DoanhThu(ref replacer,ngaybatdau,ngayketthuc,ngaylap,tongtien,tennhanvien,sotienbangchu);
+            //  BuildReplacerCurrentDate(ref replacer);
+
+            return OutSimpleReport(dataSource, replacer, "ThongKeDoanhThu", isPrintPreview, ref fileName);
+        }
         #endregion
 
-        
+
     }
 }
