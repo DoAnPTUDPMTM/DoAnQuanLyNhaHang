@@ -174,6 +174,8 @@ insert into ManHinh VALUES ('SF008',N'Quản lý thực đơn')
 insert into ManHinh VALUES ('SF009',N'Gọi món')
 insert into ManHinh VALUES ('SF010',N'Doanh thu')
 insert into ManHinh VALUES ('SF011',N'Quản lý hoá đơn')
+insert into ManHinh VALUES ('SF012',N'Nhà cung cấp')
+insert into ManHinh VALUES ('SF013',N'Phiếu nhập')
 /*----------- Bảng Nhóm tài khoản -----------*/
 CREATE TABLE NhomTaiKhoan
 (
@@ -224,6 +226,8 @@ insert into PhanQuyen values ('NV','SF008',0)
 insert into PhanQuyen values ('NV','SF009',1)
 insert into PhanQuyen values ('NV','SF010',0)
 insert into PhanQuyen values ('NV','SF011',0)
+insert into PhanQuyen values ('NV','SF012',0)
+insert into PhanQuyen values ('NV','SF013',0)
 insert into PhanQuyen values ('QL','SF001',1)
 insert into PhanQuyen values ('QL','SF002',1)
 insert into PhanQuyen values ('QL','SF003',1)
@@ -235,6 +239,8 @@ insert into PhanQuyen values ('QL','SF008',1)
 insert into PhanQuyen values ('QL','SF009',1)
 insert into PhanQuyen values ('QL','SF010',1)
 insert into PhanQuyen values ('QL','SF011',1)
+insert into PhanQuyen values ('QL','SF012',1)
+insert into PhanQuyen values ('QL','SF013',1)
 
 /* ---------- Bảng Gọi Món ----------- */
 CREATE TABLE GoiMon
@@ -249,5 +255,43 @@ CREATE TABLE GoiMon
 	ThanhTien DECIMAL,
 	CONSTRAINT FK_GoiMon_Ban FOREIGN KEY (MaBan) REFERENCES Ban(MaBan),
 	CONSTRAINT FK_GoiMon_ThucDon FOREIGN KEY (MaThucDon) REFERENCES ThucDon(MaThucDon)
+)
+
+CREATE TABLE NhaCungCap
+(
+	MaNhaCungCap VARCHAR(10) PRIMARY KEY,
+	TenNhaCungCap NVARCHAR(100),
+	SoDienThoai VARCHAR(10),
+	DiaChi NVARCHAR(100)
+)
+INSERT INTO NhaCungCap VALUES('NCC001',N'Kamereo LLP','0839443000',N'18/40 Nguyễn Cửu Vân, Quận Bình Thạnh, TP.HCM')
+INSERT INTO NhaCungCap VALUES('NCC002',N'San Hà Food','0239810082',N'Số 951 Tạ Quang Bửu, P. 6, Q. 8, Tp. Hồ Chí Minh (TPHCM), Việt Nam')
+INSERT INTO NhaCungCap VALUES('NCC003',N'Công Ty TNHH Lương Thực - Thực Phẩm Gia Hữu','0913691568',N'A2 Đường D, P. Tam Bình, Q. Thủ Đức Vựa B9-28 và B9-30 Chợ Đầu Mối Nông Sản Thủ Đức Tp. Hồ Chí Minh')
+INSERT INTO NhaCungCap VALUES('NCC004',N'Thực Phẩm Trường Thịnh - Công Ty TNHH Phân Phối Thực Phẩm Trường Thịnh','0938285624',N'Đường Nguyễn Văn Linh, P. 7, Q. 8, Tp. Hồ Chí Minh')
+CREATE TABLE NguyenLieu
+(
+	MaNguyenLieu VARCHAR(10) PRIMARY KEY,
+	TenNguyenLieu NVARCHAR(100),
+	SoLuong INT
+)
+
+CREATE TABLE PhieuNhap
+(
+	MaPhieuNhap VARCHAR(10) PRIMARY KEY,
+	NgayNhap DATE,
+	MaNhanVien VARCHAR(10),
+	MaNhaCungCap VARCHAR(10),
+	CONSTRAINT FK_PhieuNhap_NhaCungCap_MaNhaCungCap FOREIGN KEY (MaNhaCungCap) REFERENCES NhaCungCap(MaNhaCungCap),
+	CONSTRAINT FK_PhieuNhap_NhanVien_MaNhanVien FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien)
+)
+
+CREATE TABLE ChiTietPhieuNhap
+(
+	MaChiTietPhieuNhap INT IDENTITY(1,1) PRIMARY KEY,
+	MaPhieuNhap VARCHAR(10),
+	MaNguyenLieu VARCHAR(10),
+	SoLuong INT,
+	CONSTRAINT FK_CTPN_PN_MaPhieuNhap FOREIGN KEY (MaPhieuNhap) REFERENCES PhieuNhap(MaPhieuNhap),
+	CONSTRAINT FK_CTPN_NL_MaNguyenLieu FOREIGN KEY (MaNguyenLieu) REFERENCES NguyenLieu(MaNguyenLieu)
 )
 
