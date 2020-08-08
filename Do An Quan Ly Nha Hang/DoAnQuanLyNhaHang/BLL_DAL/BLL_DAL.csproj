@@ -56,6 +56,7 @@
     <Compile Include="QuanLyGoiMon.cs" />
     <Compile Include="QuanLyHoaDon.cs" />
     <Compile Include="QuanLyManHinh.cs" />
+    <Compile Include="QuanLyNguyenLieu.cs" />
     <Compile Include="QuanLyNhaCungCap.cs" />
     <Compile Include="QuanLyNhaHang.designer.cs">
       <AutoGen>True</AutoGen>

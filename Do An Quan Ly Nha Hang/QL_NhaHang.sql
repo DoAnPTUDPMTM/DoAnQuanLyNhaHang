@@ -103,6 +103,12 @@ insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD0
 insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD022','LTD03',N'Trà atiso',28000,'Còn hàng')
 insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD023','LTD12',N'Tôm hùm nướng (con)',550000,'Còn hàng')
 insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD024','LTD12',N'Nghêu hấp xả',80000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD027','LTD08',N'Dimsum HongKong',58000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD028','LTD08',N'Bánh cuốn tôm tươi',62000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD029','LTD08',N'Xíu mại thịt cua',58000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD030','LTD10',N'Canh rong biển',32000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD031','LTD10',N'Canh bao tử heo hầm tiêu',45000,'Còn hàng')
+insert into ThucDon(MaThucDon,MaLoaiThucDon,TenThucDon,Gia,TrangThai)values('TD032','LTD10',N'Canh bắp cải nhồi thịt',34000,'Còn hàng')
 GO
 /*----------- Bảng Khách Hàng -----------*/
 CREATE TABLE KhachHang
@@ -176,6 +182,7 @@ insert into ManHinh VALUES ('SF010',N'Doanh thu')
 insert into ManHinh VALUES ('SF011',N'Quản lý hoá đơn')
 insert into ManHinh VALUES ('SF012',N'Nhà cung cấp')
 insert into ManHinh VALUES ('SF013',N'Phiếu nhập')
+insert into ManHinh VALUES ('SF014',N'Quản lý nguyên liệu')
 /*----------- Bảng Nhóm tài khoản -----------*/
 CREATE TABLE NhomTaiKhoan
 (
@@ -228,6 +235,7 @@ insert into PhanQuyen values ('NV','SF010',0)
 insert into PhanQuyen values ('NV','SF011',0)
 insert into PhanQuyen values ('NV','SF012',0)
 insert into PhanQuyen values ('NV','SF013',0)
+insert into PhanQuyen values ('NV','SF014',0)
 insert into PhanQuyen values ('QL','SF001',1)
 insert into PhanQuyen values ('QL','SF002',1)
 insert into PhanQuyen values ('QL','SF003',1)
@@ -241,6 +249,7 @@ insert into PhanQuyen values ('QL','SF010',1)
 insert into PhanQuyen values ('QL','SF011',1)
 insert into PhanQuyen values ('QL','SF012',1)
 insert into PhanQuyen values ('QL','SF013',1)
+insert into PhanQuyen values ('QL','SF014',1)
 
 /* ---------- Bảng Gọi Món ----------- */
 CREATE TABLE GoiMon

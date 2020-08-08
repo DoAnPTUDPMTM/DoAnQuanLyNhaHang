@@ -70,5 +70,10 @@ namespace DoAnQuanLyNhaHang
             excel.ExportDoanhThu(lstHoaDon,ngaybatdau,ngayketthuc,tennhanvien,ref name,false);
             System.Diagnostics.Process.Start(name);
         }
+
+        private void frmDoanhThu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

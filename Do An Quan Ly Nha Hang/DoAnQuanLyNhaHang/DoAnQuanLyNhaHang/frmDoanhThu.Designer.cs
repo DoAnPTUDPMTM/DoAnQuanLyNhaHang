@@ -181,6 +181,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmDoanhThu";
             this.Text = "frmDoanhThu";
+            this.Load += new System.EventHandler(this.frmDoanhThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDoanhThu)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

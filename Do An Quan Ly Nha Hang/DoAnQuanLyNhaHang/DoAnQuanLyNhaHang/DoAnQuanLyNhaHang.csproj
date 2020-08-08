@@ -137,6 +137,12 @@
     <Compile Include="frmManHinh.Designer.cs">
       <DependentUpon>frmManHinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNguyenLieu.Designer.cs">
+      <DependentUpon>frmNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,12 @@
     </Compile>
     <Compile Include="frmPhanQuyen.Designer.cs">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuNhap.Designer.cs">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -204,6 +216,9 @@
     <EmbeddedResource Include="frmManHinh.resx">
       <DependentUpon>frmManHinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNguyenLieu.resx">
+      <DependentUpon>frmNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNhaCungCap.resx">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuNhap.resx">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaiKhoan.resx">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>

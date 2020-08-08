@@ -48,6 +48,7 @@
             this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.quảnLýNguyênLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -133,7 +134,8 @@
             this.quảnLýThựcĐơnToolStripMenuItem,
             this.quảnLýHoáĐơnToolStripMenuItem,
             this.btnQuanLyNhaCungCap,
-            this.quảnLýPhiếuNhậpToolStripMenuItem});
+            this.quảnLýPhiếuNhậpToolStripMenuItem,
+            this.quảnLýNguyênLiệuToolStripMenuItem});
             this.nghiệpVụToolStripMenuItem.Image = global::DoAnQuanLyNhaHang.Properties.Resources.icons8_admin_settings_male_50;
             this.nghiệpVụToolStripMenuItem.Name = "nghiệpVụToolStripMenuItem";
             this.nghiệpVụToolStripMenuItem.Size = new System.Drawing.Size(111, 51);
@@ -246,6 +248,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên NV:";
             // 
+            // quảnLýNguyênLiệuToolStripMenuItem
+            // 
+            this.quảnLýNguyênLiệuToolStripMenuItem.Name = "quảnLýNguyênLiệuToolStripMenuItem";
+            this.quảnLýNguyênLiệuToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.quảnLýNguyênLiệuToolStripMenuItem.Tag = "SF014";
+            this.quảnLýNguyênLiệuToolStripMenuItem.Text = "Quản Lý Nguyên Liệu";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,5 +297,6 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýHoáĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnQuanLyNhaCungCap;
         private System.Windows.Forms.ToolStripMenuItem quảnLýPhiếuNhậpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýNguyênLiệuToolStripMenuItem;
     }
 }
