@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.lblTenNhanVien = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhómTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,13 +45,10 @@
             this.quảnLýHoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnQuanLyNhaCungCap = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýPhiếuNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýNguyênLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gọiMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblTenNhanVien = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.quảnLýNguyênLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,37 @@
             this.menuStrip1.Size = new System.Drawing.Size(1129, 55);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // lblTenNhanVien
+            // 
+            this.lblTenNhanVien.AutoSize = true;
+            this.lblTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNhanVien.Location = new System.Drawing.Point(99, 8);
+            this.lblTenNhanVien.Name = "lblTenNhanVien";
+            this.lblTenNhanVien.Size = new System.Drawing.Size(60, 24);
+            this.lblTenNhanVien.TabIndex = 1;
+            this.lblTenNhanVien.Text = "label1";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Tan;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblTenNhanVien);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 536);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1129, 41);
+            this.panel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tên NV:";
             // 
             // hệThốngToolStripMenuItem
             // 
@@ -188,6 +219,15 @@
             this.quảnLýPhiếuNhậpToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.quảnLýPhiếuNhậpToolStripMenuItem.Tag = "SF013";
             this.quảnLýPhiếuNhậpToolStripMenuItem.Text = "Quản Lý Phiếu Nhập";
+            this.quảnLýPhiếuNhậpToolStripMenuItem.Click += new System.EventHandler(this.quảnLýPhiếuNhậpToolStripMenuItem_Click);
+            // 
+            // quảnLýNguyênLiệuToolStripMenuItem
+            // 
+            this.quảnLýNguyênLiệuToolStripMenuItem.Name = "quảnLýNguyênLiệuToolStripMenuItem";
+            this.quảnLýNguyênLiệuToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.quảnLýNguyênLiệuToolStripMenuItem.Tag = "SF014";
+            this.quảnLýNguyênLiệuToolStripMenuItem.Text = "Quản Lý Nguyên Liệu";
+            this.quảnLýNguyênLiệuToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNguyênLiệuToolStripMenuItem_Click);
             // 
             // gọiMónToolStripMenuItem
             // 
@@ -216,44 +256,6 @@
             this.btnDoanhThu.Tag = "SF010";
             this.btnDoanhThu.Text = "Doanh Thu";
             this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
-            // 
-            // lblTenNhanVien
-            // 
-            this.lblTenNhanVien.AutoSize = true;
-            this.lblTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNhanVien.Location = new System.Drawing.Point(99, 8);
-            this.lblTenNhanVien.Name = "lblTenNhanVien";
-            this.lblTenNhanVien.Size = new System.Drawing.Size(60, 24);
-            this.lblTenNhanVien.TabIndex = 1;
-            this.lblTenNhanVien.Text = "label1";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Tan;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lblTenNhanVien);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 536);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1129, 41);
-            this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tên NV:";
-            // 
-            // quảnLýNguyênLiệuToolStripMenuItem
-            // 
-            this.quảnLýNguyênLiệuToolStripMenuItem.Name = "quảnLýNguyênLiệuToolStripMenuItem";
-            this.quảnLýNguyênLiệuToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
-            this.quảnLýNguyênLiệuToolStripMenuItem.Tag = "SF014";
-            this.quảnLýNguyênLiệuToolStripMenuItem.Text = "Quản Lý Nguyên Liệu";
             // 
             // frmMain
             // 

@@ -243,5 +243,29 @@ namespace DoAnQuanLyNhaHang
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void quảnLýPhiếuNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmPhieuNhap();
+            if (Application.OpenForms.OfType<frmPhieuNhap>().Any())
+            {
+                Application.OpenForms.OfType<frmPhieuNhap>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void quảnLýNguyênLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmNguyenLieu();
+            if (Application.OpenForms.OfType<frmNguyenLieu>().Any())
+            {
+                Application.OpenForms.OfType<frmNguyenLieu>().First().Close();
+            }
+            frm.WindowState = FormWindowState.Maximized;
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
