@@ -170,7 +170,7 @@
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.Size = new System.Drawing.Size(149, 41);
             this.btnInHoaDon.TabIndex = 7;
-            this.btnInHoaDon.Text = "In Hoá Đơn";
+            this.btnInHoaDon.Text = "In";
             this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // frmDoanhThu
