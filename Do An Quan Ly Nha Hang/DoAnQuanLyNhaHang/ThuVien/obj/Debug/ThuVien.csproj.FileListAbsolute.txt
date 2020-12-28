@@ -11,4 +11,5 @@ C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuan
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\bin\Debug\ThuVien.pdb
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.dll
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.pdb
-C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.csprojResolveAssemblyReference.cache
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.csprojAssemblyReference.cache
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\ThuVien\obj\Debug\ThuVien.csproj.CoreCompileInputs.cache

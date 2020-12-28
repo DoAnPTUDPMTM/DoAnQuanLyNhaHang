@@ -61,6 +61,7 @@
             this.dtgvThucDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvThucDon.Location = new System.Drawing.Point(3, 314);
             this.dtgvThucDon.Name = "dtgvThucDon";
+            this.dtgvThucDon.RowHeadersWidth = 51;
             this.dtgvThucDon.RowTemplate.Height = 24;
             this.dtgvThucDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvThucDon.Size = new System.Drawing.Size(1673, 376);

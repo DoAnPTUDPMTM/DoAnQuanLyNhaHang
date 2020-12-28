@@ -138,7 +138,6 @@ C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuan
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\bin\Debug\es\DevExpress.Office.v19.2.Core.resources.dll
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\bin\Debug\ja\DevExpress.Office.v19.2.Core.resources.dll
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
-C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.csprojResolveAssemblyReference.cache
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.csproj.ResolveComReference.cache
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.frmBan.resources
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.frmDangNhap.resources
@@ -161,3 +160,7 @@ C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuan
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.exe.licenses
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.exe
 C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.pdb
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\bin\Debug\BLL_DAL.dll.config
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.csprojAssemblyReference.cache
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.csproj.CoreCompileInputs.cache
+C:\DevPrograms\GitHub\PTUDPMTM\DoAnQuanLyNhaHang\Do An Quan Ly Nha Hang\DoAnQuanLyNhaHang\DoAnQuanLyNhaHang\obj\Debug\DoAnQuanLyNhaHang.csproj.CopyComplete
